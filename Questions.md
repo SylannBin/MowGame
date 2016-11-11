@@ -12,7 +12,9 @@ Cela confirme le besoin de la classe manche
 
 Mais faut-il une classe troupeau qui ne contiendra qu'une liste de cartes et aucune méthode ? 
 
+### Est-ce important d'avoir une propriété de type bool, correspondant au résultat d'une méthode
 
+Par exemple, si j'ai une méthode qui m'indique si toutes les cartes du troupeau sont présentes, est-ce utile d'avoir une propriété booléenne correspondante qui est mise à jour par la méthode ?
 
 ### Container pour le troupeau
 

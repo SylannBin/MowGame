@@ -9,6 +9,21 @@ De même pour la pioche, la main et l'étable.
 
 Ou alor suffit-il de les ajouter comme propriétés de "joueur", "manche" ou "jeu" ?
 
+### Autre possibilité: Une classe pour chaque ensemble de cartes
+
+Une classe EnsembleCarte dont hérite : pioche, troupeau, main et etable
+Méthodes:
+
+* compterMouches()
+* ajouterCarte()
+* RetirerCarte()
+* ajouterPlusieursCartes()
+* vider()
+
+Propriétés:
+
+* nombreMaxCarte
+
 ### Interface vs classe abstraite
 
 Je lis plusieurs articles en cherchant sur google mais je n'arrive pas à trouver toutes les informations pour décider.

@@ -58,8 +58,6 @@ Les cartes réprésentent des vaches et peuvent avoir de 0 à 5 mouches. C'est l
 
 Lorsqu'un joueur utilise une carte spéciale, il peut décider de change le sens de jeu.
 
-Si un joueur ne peut pas ou ne veut pas poser une vache dans le troupeau, il doit ramasser toutes les cartes du troupeau et les ajouter à son étable, face cachée. Il doit ensuite poser une carte pour démarrer un nouveau troupeau (sauf s'il ny a plus de pioche).
-
 ## Démarrer une partie
 
 Le jeu se déroule en plusieurs manches.
@@ -73,13 +71,17 @@ Par la suite, chaque joueur peut:
 * Choisir de ramasser le troupeau ou non
 * Puis poser une carte dans le troupeau et en reprendre une dans la pioche.
 
+Si un joueur ne peut pas ajouter de carte dans le troupeau, il doit le ramasser obligatoirement.
+
 Les cartes doivent être disposées de manière à respecter l'ordre de 0 à 16 et il ne peut y avoir qu'une seule carte de chaque numéro dans le troupeau. Seules les 2 vaches acrobates font exception.
 
 La manche prend fin lorsqu'il n'y a plus de pioche et qu'un joueur à ramassé le troupeau.
 
-1. On compte alors le nombre de mouche que chaque joueur possède dans son étable. Chaque mouche ajoute 1 point de honte.
-2. On regroupe toutes les cartes et on les mélange.
-3. On passe à la manche suivante.
+1. Chaque joueur ajoute sa main à son étable.
+2. On compte alors le nombre de mouche que chaque joueur possède dans son étable. 
+3. Chaque mouche ajoutant 1 point de honte, on en déduit le score de chaque joueur.
+4. On regroupe toutes les cartes et on les mélange.
+5. On passe à la manche suivante.
 
 Le jeu s'achève lorsqu'un joueur totalise 100 points de honte.
 

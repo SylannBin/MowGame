@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mowProject", "mowProject.csproj", "{2960A0B0-94CE-4C6A-82AC-0B33AC9F7289}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ClassModel", "..\ClassModel\ClassModel.modelproj", "{C9122AFA-391F-4480-854F-5638DE9F121B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2960A0B0-94CE-4C6A-82AC-0B33AC9F7289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2960A0B0-94CE-4C6A-82AC-0B33AC9F7289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2960A0B0-94CE-4C6A-82AC-0B33AC9F7289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2960A0B0-94CE-4C6A-82AC-0B33AC9F7289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9122AFA-391F-4480-854F-5638DE9F121B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9122AFA-391F-4480-854F-5638DE9F121B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9122AFA-391F-4480-854F-5638DE9F121B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9122AFA-391F-4480-854F-5638DE9F121B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

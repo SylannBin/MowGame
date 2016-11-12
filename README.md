@@ -19,9 +19,13 @@ Il devrait permettre à un ou plusieurs joueurs humains de s'opposer entre eux o
 * Jeter les bases de l'interface graphique
 * Coder les cartes du jeu avec leurs spécificités
 
-## Prochaine étape: De l'algorithmie au développement
+## Objectifs secondaires: 
 
-Workflow:
+* Stocker l'état d'une partie dans un fichier, pour pouvoir la reprendre en cas d'extinction du program (volontaire ou non)
+* Stocker les statistiques de jeu pour pouvoir les utiliser sur le long terme.
+
+## Prochaine étape: Le workflow, de l'algorithmie au développement
+
 1. Décrire une classe, interface, ou principale fonctionnalité, d'un point de vue global
 2. Transmettre des noms de méthode avec les inputs prévus, et l'output attendu
 3. Sortir l'algorithmie de cette méthode, préciser le déroulement, la logique d'exécution

@@ -1,0 +1,1522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cce612d5-82a4-44e0-8e40-1e550ab6b5b9"
+  name="ClassModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="9e650818-c3d4-4932-bc91-fd5d9331e43b">
+      <profileInstance
+        Id="e5271b32-551e-4dd8-897b-821b614943c4"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e34e3965-c867-46eb-bea4-c9aa89caeeca"
+        name="Humain"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="e550750f-7cd0-42e8-a4d3-9ab3e245296f">
+            <interfaceMoniker
+              Id="3c4dffaa-05fb-481b-82e3-9de308295ca3"
+              LastKnownName="IPlayATurn"
+              LastKnownLocation="ClassModel.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="a7187f0f-f358-49dc-b667-618d5764ab64"
+            isSubstitutable="false">
+            <classMoniker
+              Id="1154215d-67fa-4405-9be4-a13fa9e634ec"
+              LastKnownName="Joueur"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="45b0cbcc-b605-4afd-9d0c-21ff55d73fa0"
+            name="attendreChoix"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>S'il y a plusieurs actions possible au tour du joueur,
+l'humain se voit présenter le choix d'actions dans un menu.
+
+Il doit sélectionner son action pour que le tour s'exécute.
+Renvoie le choix du joueur.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5b164e9b-c62f-4e95-900e-232b32737a12"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="139fac0a-13bc-44be-ab3c-1c57e7dad67f"
+                      LastKnownName="EAction"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3c4dffaa-05fb-481b-82e3-9de308295ca3"
+        name="IPlayATurn"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a1555466-6a27-4ff6-9575-a89a28ed592c"
+        name="AI"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="786bfe4d-11cb-4717-9e32-d7192258a19e">
+            <interfaceMoniker
+              Id="3c4dffaa-05fb-481b-82e3-9de308295ca3"
+              LastKnownName="IPlayATurn"
+              LastKnownLocation="ClassModel.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="32fc1834-a8bb-4604-88d2-d0d698fb8df0"
+            isSubstitutable="false">
+            <classMoniker
+              Id="1154215d-67fa-4405-9be4-a13fa9e634ec"
+              LastKnownName="Joueur"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a1749bc1-4313-4df6-aede-90f7fbf32dad"
+            name="deciderAction"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Doit déterminer l'action que va choisir l'IA.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1b963d86-1a69-4b0d-99d5-1b764ab4dd9d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="139fac0a-13bc-44be-ab3c-1c57e7dad67f"
+                      LastKnownName="EAction"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="854c9c2d-f9ce-494b-9960-75369c0e13ed"
+        name="Vache"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="aa0e777f-00d4-49a9-a695-ef7a628b9e7c">
+            <enumerationMoniker
+              Id="46d25d09-be10-42c2-b967-2a8589bad743"
+              LastKnownName="ECategorieVache"
+              LastKnownLocation="ClassModel.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b37eaf97-f28b-4d27-8e7b-48ed9be7b831"
+            name="Numero"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Indique le numéro de la carte, c'est à dire son identité principale.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8425d210-79b2-46c4-b227-4e30278c8aa0"
+            name="nb_mouches"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Indique le nombre de mouches présente sur la carte.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bd565417-e6e3-40d4-b401-426a29cb2a9e"
+            name="Categorie"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Indique la catégorie de vache à laquelle correspond la carte</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="46d25d09-be10-42c2-b967-2a8589bad743"
+                LastKnownName="ECategorieVache"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="46d25d09-be10-42c2-b967-2a8589bad743"
+        name="ECategorieVache"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="fff73e05-b3e4-4851-b8a7-62059e218aaf"
+            name="Acrobate">
+            <specification>
+              <literalInteger
+                Id="c67aea8a-1f99-44c0-bf08-76e4418b23ab"
+                name="Integer"
+                value="2" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="b1a67830-bbf0-4374-98ea-82725266a88f"
+            name="Retardataire">
+            <specification>
+              <literalInteger
+                Id="9a31422a-a771-4f96-ac10-19aaa6cb9da9"
+                name="Integer"
+                value="3" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="9fe68f81-f47a-4b43-b109-9e831c5e1f64"
+            name="SerreFile">
+            <specification>
+              <literalInteger
+                Id="accafa1d-14eb-456f-ab11-b1c8100c964f"
+                name="Integer"
+                value="1" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="5a182bc3-f1a0-4589-9311-7c9b4696767f"
+            name="Standard">
+            <specification>
+              <literalInteger
+                Id="52fa5c08-b357-4b4b-9e01-e1c372941e9c"
+                name="Integer"
+                value="0" />
+            </specification>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="78554414-af3e-4c2d-9a5e-b83ea45efcfa"
+        name="Manche"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Une manche se termine lorsque la pioche et le troupeau sont vides.
+Le nombre de tour est illimité.
+Chaque fois qu'une manche commence, on génère une pioche à partir du Deck de jeu.
+Puis on distribue 5 cartes depuis la pioche vers la main de chacun des joueurs.
+Les statistique de la manche sont conservées.</description>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a74efb54-8fe6-4ec3-9781-44a4413456fb">
+            <interfaceMoniker
+              Id="68b1245b-a7b7-469a-8f5f-4a76cb25a6be"
+              LastKnownName="IGame"
+              LastKnownLocation="ClassModel.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="08796d42-0088-4c4f-9964-1c7fe0b7f7bf"
+            isSubstitutable="false">
+            <classMoniker
+              Id="6730f457-16fb-4fd6-99ed-a7d2be6bb649"
+              LastKnownName="Statistique"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7de40053-58c8-44d4-a913-fd5f597821a4"
+            name="est_fini"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>La manche se termine lorsque la pioche et le troupeau sont vides.
+Cas possibles (la pioche étant vide):
+Un joueur ne peut pas jouer une carte, et ramasse obligatoirement le troupeau.
+Ou alors un joueur décide de ramasser le troupeau même s'il pouvait jouer.
+Les joueurs peuvent continuer jouer sans piocher, mais ils devraient être incapable de joueur assez rapidement.
+</description>
+          </operation>
+          <operation
+            Id="158384d5-dcf4-4183-937b-503902f7c6f2"
+            name="GenererPioche"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Dispose de manière aléatoire l'ensemble des cartes du Deck de jeu dans la pioche.</description>
+          </operation>
+          <operation
+            Id="49d55670-6fef-48e1-9131-cd1ffb08ee30"
+            name="Distribuer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Effectue 5 fois, pour chaque joueur da la partie:
+Enlève la dernière carte de la pioche et l'ajoute à la main d'un joueur.</description>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="68b1245b-a7b7-469a-8f5f-4a76cb25a6be"
+        name="IGame"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Chaque état du déroulement du jeu a sa propre manière de finir.</description>
+        <ownedOperations>
+          <operation
+            Id="d849513c-6b34-440b-a996-badd5a22adf2"
+            name="est_fini"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ed1817dd-22ed-45d8-ba3d-c39ee51ca8c6"
+        name="Partie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Le jeu se termine lorsqu'un joueur atteint les 100 points.
+Il peut contenir un nombre de manches limité mais indéterminé.
+On peut traquer les statistiques de l'ensemble d'une partie.</description>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="9e8d2ffe-0e6e-4bdd-8472-c458333512a7">
+            <interfaceMoniker
+              Id="68b1245b-a7b7-469a-8f5f-4a76cb25a6be"
+              LastKnownName="IGame"
+              LastKnownLocation="ClassModel.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="68c6a3ce-4568-4510-88d9-91563b8340e2"
+            isSubstitutable="false">
+            <classMoniker
+              Id="6730f457-16fb-4fd6-99ed-a7d2be6bb649"
+              LastKnownName="Statistique"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b3d0404e-d7c4-4ab3-92cd-60d6dba233b8"
+            name="nb_joueurs"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="108c960c-75d9-4f87-b33a-a4dc7dc0cacf"
+            name="nb_manches"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="46407eb7-55ec-4634-bed1-51ae4ecd4f36"
+            name="est_fini"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>La partie se termine lorsqu'un joueur atteint les 100 points.</description>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1ba39da2-d57f-440d-924c-4b91cf0470cb"
+        name="Pioche"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d59a3f26-fde9-48d6-a5d3-e50cf1b7a5f7"
+        name="Etable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="69fa4019-7f0f-4365-9b52-5d1b13335d77"
+        name="Main"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="c956e6c0-e31f-43e2-b360-dc9f92a29302"
+        name="ESensDeJeu"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="75807068-1718-4a18-adee-62982c163f10"
+            name="Horaire">
+            <specification>
+              <literalInteger
+                Id="852d1562-4e61-4c28-bd1e-da2023a67896"
+                name="Integer"
+                value="1" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="ef0a181a-6597-476b-98f0-f25b94aed070"
+            name="AntiHoraire">
+            <specification>
+              <literalInteger
+                Id="bb680dc3-31bc-4475-8ffc-c3d9dcfed6cb"
+                name="Integer"
+                value="0" />
+            </specification>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6730f457-16fb-4fd6-99ed-a7d2be6bb649"
+        name="Statistique"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="eb8b7529-a2ab-4679-b1a2-ec69c4569cf8"
+            name="max_cartesRamassees"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c6c78344-e43c-4c14-8f1a-c1a565b3feb7"
+            name="max_cartesTroupeau"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e247c9aa-eb6c-41f7-8bf5-d5b9ccd27a96"
+            name="max_mouchesRamassees"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a4aa4d7a-0aaf-49a8-b68f-41525d773bbc"
+            name="min_cartesRamassees"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e2f2b470-aeae-4769-a94f-c7c24096342f"
+            name="min_mouchesRamassees"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="117552ad-29aa-42e4-8fd8-d3c89b6aa9b0"
+            name="nb_cartesJouees"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d58b62bc-30e1-4cb0-95a5-abd21f35217d"
+            name="nb_cartesPiochees"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="78cf2a25-63e9-4345-8cf1-746c5b569b1f"
+            name="nb_cartesRamassees"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d5c00806-3514-4233-aa80-bf39d3990927"
+            name="nb_changerSens"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1d250116-0e57-4bff-92ed-5b1eb2794a5e"
+            name="nb_troupeauComplet"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="70437ee1-249d-4f40-856c-0147573afd1f"
+        name="EnsembleCarte"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Classe correspondant à un ensemble de carte.
+Peut être "Main", "Etable", "Pioche", "Deck" ou "Troupeau".
+Implémente les méthodes et propriétés communes permettant l'évolution de l'ensemble au fil du jeu.
+</description>
+        <targetEnds>
+          <association
+            Id="47ff7233-09ef-48df-b355-1687aad3e49d"
+            isDerived="false"
+            sourceEndRoleName="EnsembleCarte"
+            targetEndRoleName="Carte"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="854c9c2d-f9ce-494b-9960-75369c0e13ed"
+              LastKnownName="Vache"
+              LastKnownLocation="ClassModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96ccc9b3-66a1-4b36-94ac-75e9ea698efa"
+                  name="EnsembleCarte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="580c58b4-d443-4e57-a1ea-4a56cd2d398b"
+                  name="Carte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a2e0bb6b-b839-444e-a3de-5b957e69d638"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="55abeca5-a601-45c1-99b0-039ba689ab50"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0610a459-86a6-4af6-9b3c-bd312d77964c"
+            name="Cartes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Collection générique contenant le type Vache.
+La contenance maximale est précisée par la propriété max_cartes.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="1b6926f0-e75c-4798-be66-6aabe9e9b087"
+                LastKnownName="List&lt;Vache&gt;"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dba2fe00-d351-4c34-a7ea-584dec37418f"
+            name="max_cartes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Précise le nombre maximum de cartes que la List Cartes peut contenir.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3a86bf48-ae07-41dd-a811-d00f08eca5f4"
+                name="TextTemplateBindings"
+                profile="TextTemplateBindings">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49c70eee-63f0-48af-8d85-f6a52f8f107a">
+                    <propertyInstance
+                      Id="5827381a-118b-4204-9892-4fe14c619218"
+                      name="Alias" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8218f7cb-1713-4743-816f-f9a1e43055d2">
+                    <propertyInstance
+                      Id="d8893d00-6cde-4822-b22a-cabebdd1d50f"
+                      name="TemplateFilePath" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eec02339-d14b-4fca-82c3-c82a68b899c4">
+                    <propertyInstance
+                      Id="e0725151-b32f-4e4e-a787-5c9c7529dcd8"
+                      name="ProjectPath" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39fa413a-968a-4d71-80cc-6b1d330a11a1">
+                    <propertyInstance
+                      Id="f22f5d02-82da-4ec6-a926-1d2bc71d7844"
+                      name="TargetDirectory" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75228158-6968-4df3-81f1-a5a98ba2092a">
+                    <propertyInstance
+                      Id="27e17745-2e97-4404-8724-9ef4cf8114fe"
+                      name="TargetName" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78a54a6e-0692-45e3-b0a7-5e925996a65e">
+                    <propertyInstance
+                      Id="3f582ff2-9cc4-45ec-a918-c6f787662427"
+                      name="Overwrite" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1cac5ced-9683-4fbc-98d2-618f57232530">
+                    <propertyInstance
+                      Id="28800cb1-12f1-49a4-a9ed-df979323412b"
+                      name="Parameters" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="edd4b215-682f-4a45-8611-abb850be56d3"
+            name="Est_vide"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d127ac3-4d1b-4bc4-82fa-8e75383ecf85"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fca33717-b91a-44b0-b1f5-6a9c363739d3"
+            name="CompterMouches"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8065ca95-7b2b-452f-b657-10e585bb9fc9"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="06685632-ce1f-4e3f-aa4c-ac859e8f9451"
+            name="Vider"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="efac03d3-2e76-4f60-a55c-5943a1dd2da5"
+            name="AjouterCarte"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d04cbfe2-a871-47e6-ac3e-406f4659e7e3"
+                  name="carte"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="854c9c2d-f9ce-494b-9960-75369c0e13ed"
+                      LastKnownName="Vache"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4eb943bd-d5f0-48a6-9f8b-fe742c6b5583"
+            name="RetirerCarte"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5a57d25b-c8b7-47ae-a5e3-b3d99dfba5e1"
+                  name="carte"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="854c9c2d-f9ce-494b-9960-75369c0e13ed"
+                      LastKnownName="Vache"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1154215d-67fa-4405-9be4-a13fa9e634ec"
+        name="Joueur"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="c030889b-92cf-4bdd-9001-f5f73e470f12"
+            name="Etable"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Etable du joueur
+Contient toutes les cartes ramassées par le joueur
+Le nombre de mouches contenue indique les points du joueur</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c60571bb-c260-4bc5-a424-08ea5ce32811"
+                name="TextTemplateBindings"
+                profile="TextTemplateBindings">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d0c4871-a126-4ad7-89d7-cfc332ef3319">
+                    <propertyInstance
+                      Id="ae0cfe7e-de5b-4b1d-92ed-f91a97fd297a"
+                      name="Alias" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df748f40-f05d-42cc-b2b4-9145e90b743e">
+                    <propertyInstance
+                      Id="0621a8fe-c5ed-4907-bdc8-62b2b7c7ab01"
+                      name="TemplateFilePath" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bb6ad28-a62c-4280-807e-17897da6f73f">
+                    <propertyInstance
+                      Id="d67e23da-8bbb-4b09-91f9-38ac36f99302"
+                      name="ProjectPath" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d30e7c18-a52c-42f7-a159-8d749e7d413d">
+                    <propertyInstance
+                      Id="27c22647-44da-4434-aec6-44ed90c6dfa5"
+                      name="TargetDirectory" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfb7bf83-d16e-4ebe-98aa-dceaba560a62">
+                    <propertyInstance
+                      Id="8f9b5c5e-5465-4f5e-9dfa-197ef5151c2f"
+                      name="TargetName" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30c42921-e78d-4c40-9d3e-90763f9e6de7">
+                    <propertyInstance
+                      Id="ab94f8dc-4a0a-46ae-9bc3-c4d51f0095fe"
+                      name="Overwrite" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f976203f-0a5c-4d5c-9fd0-05d9334697f7">
+                    <propertyInstance
+                      Id="e6f6ce80-febd-4a94-aeb5-cf4641209cbf"
+                      name="Parameters" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="70437ee1-249d-4f40-856c-0147573afd1f"
+                LastKnownName="EnsembleCarte"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1cbdcaaf-82e3-4dd9-8368-0f280bb85f99"
+            name="Main"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Main du joueur, liste de cartes (type Vache)
+Peut contenir jusqu'à 5 cartes</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="70437ee1-249d-4f40-856c-0147573afd1f"
+                LastKnownName="EnsembleCarte"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="887ebe82-90a5-4000-8662-063914b7c111"
+            name="score"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="81a09d5a-5273-469e-90f9-a0dabcc05d56"
+            name="id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0968c6fe-320c-4b9c-b5be-7c5312cbde3f"
+            name="Pseudo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="121ad064-c276-4d45-8361-9671a12e9e3b"
+            name="changerSens"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Change l'ordre selon lequel les joueurs enchainent le jeu.
+Horaire: respecte le sens des aiguilles d'une montre.
+Anti-horaire: dans le sens inverse.
+Renvoie le sens après changement effectif.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="58ebd6c1-0656-40b4-95aa-b4434465d486"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="c956e6c0-e31f-43e2-b360-dc9f92a29302"
+                      LastKnownName="ESensDeJeu"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4438d6a1-b094-4b6a-b3eb-29f3fcbc09e7"
+            name="piocher"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Récupère une carte depuis la pioche.
+La carte est supprimée de la pioche et ajoutée à la main du joueur.
+Renvoie la carte piochée.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="992dd04d-0fef-4534-8a54-b6ea2405ebe7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="854c9c2d-f9ce-494b-9960-75369c0e13ed"
+                      LastKnownName="Vache"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a980d75e-8656-481e-8c99-3389680470fd"
+            name="poser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Dépose une carte depuis la main du joueur dans le troupeau.
+Appelle la méthode de sélection de la position dans le troupeau.
+Si celle-ci ne renvoie pas false:
+La carte jouée est supprimée de la main du joueur
+Puis elle est ajoutée au troupeau à la position renvoyée par la méthode de placement de carte.
+Renvoie la carte posée.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d811c0e-c943-4d53-82c1-2ace3861a104"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="854c9c2d-f9ce-494b-9960-75369c0e13ed"
+                      LastKnownName="Vache"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4b9c33ff-8670-4c12-aa32-bf6c1d27c034"
+            name="ramasser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Ramasser les cartes du troupeau.
+Supprime les cartes du troupeau et les ajoute à l'étable du joueur.
+Appelle la fonction de comptage du nombre de mouches.
+Renvoie le nombre de mouches récupérées lors du ramassage.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7b494a4-c164-4a97-844c-e12c4bacc0b2"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="139fac0a-13bc-44be-ab3c-1c57e7dad67f"
+        name="EAction"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Liste des actions possibles d'un joueur dans un tour.
+Toutes ne sont pas toujours disponibles.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="0b9b9c10-d0f0-46d3-a146-acf0ee81bff3"
+            name="ChangerLeSensDeJeu">
+            <specification>
+              <literalInteger
+                Id="7aae260f-ee94-4f18-9757-9cb8ad3d710e"
+                name="Integer"
+                value="3" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="5e60f116-88fd-4044-9d0f-8e27c5418abe"
+            name="RamasserLeTroupeau">
+            <specification>
+              <literalInteger
+                Id="c72bcea9-2187-4f6b-ad3c-9bd31d1103a4"
+                name="Integer"
+                value="0" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="376c106a-b8da-443c-945f-164cd6b8e4ef"
+            name="PiocherUneCarte">
+            <specification>
+              <literalInteger
+                Id="4fd0616b-098d-49fc-935e-15ffb25dfc2c"
+                name="Integer"
+                value="2" />
+            </specification>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="e4d43a1e-c680-4e9d-bcd4-c94820aa2015"
+            name="PoserUneCarte">
+            <specification>
+              <literalInteger
+                Id="1957f38b-d9ce-42d7-adb8-274867999bc8"
+                name="Integer"
+                value="1" />
+            </specification>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d22ea381-42f1-4551-8499-b77a5184d195"
+        name="EA" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="af972569-138c-43de-a35e-118a9aa2a8ce"
+        name="E" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a6563d29-8d27-4469-aa4c-cb37299ed22a"
+        name="Class" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="82fb2f00-caca-4504-ae94-95781a39e576"
+        name="c" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="574c3cbb-9938-460b-bfa4-3f324108748f"
+        name="T" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="99904dc0-ba6a-4b46-9ee5-f7a43240da24"
+        name="List&lt;T&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="923a8989-bc0e-42fb-a42d-50df4446be16"
+        name="Troupeau"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Ensemble de cartes visibles constituant la zone de jeu principale.
+Ne peut contenir qu'une seule carte de chaque numéro.
+Les cartes retardataires peuvent remplacer n'importe quel numéro de 1 à 15 et respectent la même règle.
+Parcontre les cartes acrobates ne peuvent être placées que si leur numéro respectif est déjà présent (7 ou 9).
+</description>
+        <generalsInternal>
+          <generalization
+            Id="824e6a40-b5c7-49c0-a406-9bcf6bc65b4b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="70437ee1-249d-4f40-856c-0147573afd1f"
+              LastKnownName="EnsembleCarte"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8e2a4f31-edaf-4204-bcf8-4ac11657c9c7"
+            name="Est_complet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Renvoie vrai si toutes les places sont occupées.
+Dans la List, les positions de 0 à 16 correspondent aux numéros identiques.
+Les positions 17 et 18 correspondent aux cartes acrobates 7 et 9
+Est utilisé dans les statistiques de jeu comme achievement exceptionnel.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4b7a9578-1b16-400f-bae7-4dabc4f8bc8c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bb16fb68-822b-49a9-bf23-e28b2718ae2b"
+            name="Est_Libre"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Renseigne l'appeleur de la méthode sur la disponibilité de l'emplacement pour la carte qu'on essaie de jouer.
+S'il s'agit d'une carte acrobate, renvoie vrai si le numéro est Présent dans le troupeau et faux à l'inverse.
+Sinon, renvoie vrai si le numéro est Absent, et faux à l'inverse.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e825eaee-40c1-4090-bb5f-d97ed1d483f8"
+                  name="numero"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8d6bc299-70d4-4886-9475-c6051929c636"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1b6926f0-e75c-4798-be66-6aabe9e9b087"
+        name="List&lt;Vache&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7d0df9e9-d4f8-44a3-abac-436d0f52d9cd"
+        name="Pioche"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Ensemble des cartes constitué au début de chaque manche.
+Peut être défaussé d'une carte  à la fois.
+Lorsqu'elle est vide, la fin de la manche se prépare.</description>
+        <generalsInternal>
+          <generalization
+            Id="6dae4942-f587-473e-864e-a605a140842b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="70437ee1-249d-4f40-856c-0147573afd1f"
+              LastKnownName="EnsembleCarte"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="406bf295-64a6-44a9-8be6-792f05d6a570"
+        name="Etable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Chaque joueur dispose de sa propre étable.
+Vide en début de manche, elle peut se remplir de 2 manières.
+A chaque fois que le joueur ramasse les cartes du troupeau.
+En fin de manche lorsque la main est vidée.
+Le nombre de mouches présentes dans l'étable constitue le score du joueur.</description>
+        <generalsInternal>
+          <generalization
+            Id="5b459536-9ec6-41ff-86b5-0a21c5e1f4a7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="70437ee1-249d-4f40-856c-0147573afd1f"
+              LastKnownName="EnsembleCarte"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9002fed8-8cc4-4292-945d-a9e68482431a"
+        name="Main"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Chaque joueur dispose de sa propre main.
+5 Cartes y sont ajoutées au début de manche.
+Elle contient normalement toujours 5 cartes.
+Lorsque le joueur place une de ses cartes, la main n'est plus pleine, et le joueur peut alors piocher (sauf si la pioche est vide).
+A la fin de chaque manche, le contenue de la main de chaque joueur va à son étable respective.</description>
+        <generalsInternal>
+          <generalization
+            Id="0e81bbda-f343-4e81-b579-28a5e7d2a136"
+            isSubstitutable="false">
+            <classMoniker
+              Id="70437ee1-249d-4f40-856c-0147573afd1f"
+              LastKnownName="EnsembleCarte"
+              LastKnownLocation="ClassModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f78acc81-c25b-4225-bb75-40059e9ed711"
+            name="Est_Pleine"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Indique si la main est plein (cad contient 5 cartes) .</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0bc84c7-08fc-4649-9c0f-9e693a2e1a6c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="294cc36b-99fd-4345-828a-5e8bbf332d3a"
+        name="Tour"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Un tour est associé à un seul et unique joueur à la fois.
+Le tour ne finit pas tant que le joueur n'est pas à cours d'action.
+Lorsque le tour est fini, on passe au joueur suivant selon le sens de jeu.
+Horaire : joueur++.
+Anti horaire : joueur--.
+</description>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="910f7c47-7749-4429-abfe-0ecb2f858b41">
+            <interfaceMoniker
+              Id="68b1245b-a7b7-469a-8f5f-4a76cb25a6be"
+              LastKnownName="IGame"
+              LastKnownLocation="ClassModel.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="b82997dd-31ae-4786-8cbe-36087625a1b1">
+            <enumerationMoniker
+              Id="c956e6c0-e31f-43e2-b360-dc9f92a29302"
+              LastKnownName="ESensDeJeu"
+              LastKnownLocation="ClassModel.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3d9f19f4-d895-448e-b75b-3df69d868723"
+            name="sensDeJeu"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ee8d3796-a0e1-4897-bb10-8fcbc2c62226"
+            name="joueur"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="1154215d-67fa-4405-9be4-a13fa9e634ec"
+                LastKnownName="Joueur"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="36978efd-943f-4835-8cbf-479da752da96"
+            name="est_fini"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Le tour est fini lorsque le joueur a terminé c'est à dire:
+Si la pioche n'est pas vide, lorsqu'il a pioché.
+Sinon s'il lui reste au moins une carte, lorsqu'il a joué une carte.
+Sinon lorsqu'il a ramassé le troupeau.
+Cas possibles:
+Il ne peut/veut pas jouer et ramasse le troupeau, puis joue, puis pioche.
+Il joue, puis pioche.
+Il ramasse puis joue, puis ne peut pas piocher.
+Il joue, puis ne peut pas piocher.
+Il ramasse, et n'a plus de carte.
+
+</description>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -32,6 +32,23 @@ Il devrait permettre à un ou plusieurs joueurs humains de s'opposer entre eux o
 4. Coder la méthode
 5. Intégrer au programme
 
+# Le design
+
+* Résolution: 1024x768
+* Plateau de jeu dans la partie haute de l'écran, joueurs positionnés en cercle autour du troupeau et de la pioche.
+* Les positions ne changent pas au fil de la partie
+* Affichage du sens de jeu: icone flèche horaire/anti-horaire
+* Dans le troupeau, chaque carte a sa position (statique). 
+  * si on peut, on essaiera de centrer les cartes avec positionnement dynamique.
+
+# Le déroulement du jeu
+
+* Actions possibles joueur courant: ramasser le troupeau, jouer carte
+* Si impossible de jouer: ramasser
+* Si jouer carte retardataire && plusieurs positions disponibles: choix position
+* Si carte jouée est spéciale (5 mouches): choix disponible changer de sens de jeu, conserver sens de jeu
+* Si aucune pioche et aucun troupeau: fin du tour
+
 # Explications des règles du jeu
 
 ## Introduction

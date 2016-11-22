@@ -12,9 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace mowProject
 {
+
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -22,6 +25,17 @@ namespace mowProject
     {
         public MainWindow()
         {
+            
+
+
+            // TODO: Comprendre comment coder le choix du nom selon joueur humain ou IA
+            // TODO: Terminer les classes et générer le code une bonne fois pour toute
+
+            // TODO: Théo -> fonction génération aléatoire d'un numéro et sélection du nom pour l'IA dans la liste des noms
+            // new List<string>() { "George", "Jaqueline", "Andreas", "Jacob" };
+            // exemple: List<string> ListeNom = File.ReadAllLines(@"C:\");
+
+
             InitializeComponent();
         }
     }

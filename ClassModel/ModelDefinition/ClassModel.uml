@@ -3,6 +3,88 @@
   dslVersion="1.0.0.0"
   Id="cce612d5-82a4-44e0-8e40-1e550ab6b5b9"
   name="ClassModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="6e4795e6-fc0e-4265-9244-792722e7ece6"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="013d517b-1d37-4706-af65-7c96e3c0231b">
+          <propertyInstance
+            Id="864ba812-1a0c-427a-94dd-50b76d8258f7"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="9a4e073e-f85f-4d9c-94d7-8fe6757413b0">
+          <propertyInstance
+            Id="38c52f30-0d48-4176-8009-512c20e50056"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b6e2fd37-670f-4705-bbeb-cca49947f301">
+          <propertyInstance
+            Id="48fd507a-757f-40fd-9220-937d1d5d3998"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="027a7c0a-195b-4dd5-b95a-e3334c2d4200"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="594d9e79-a8a2-42ec-be06-a1745c81258a">
+          <propertyInstance
+            Id="1294aba9-6083-4500-9d30-bf5f536011a6"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="254900c0-c7b1-4c51-8c66-de087efc88d3">
+          <propertyInstance
+            Id="3cd3e61d-a52d-430d-876c-41645d2188c0"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="770742d4-6b4c-4337-a5b1-8df77f001d3c">
+          <propertyInstance
+            Id="0cd71453-02de-4b94-93de-1021f5e278a3"
+            name="ProjectPath"
+            value="ClassTemplate=..\ClassModelLib\ClassModelLib.csproj|EnumTemplate=..\ClassModelLib\ClassModelLib.csproj|InterfaceTemplate=..\ClassModelLib\ClassModelLib.csproj|StructTemplate=..\ClassModelLib\ClassModelLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="d236377c-5a23-425e-af66-2da39a5f683d">
+          <propertyInstance
+            Id="a3c9d1e8-acfc-42ac-a9a0-109990336162"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="80038ad7-bcf3-448c-9035-a4a97ec8c309">
+          <propertyInstance
+            Id="55034a39-daf4-4556-a896-e87df81c5a39"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b774529c-9fc1-465d-ae66-38321ee30087">
+          <propertyInstance
+            Id="7aeb6484-85a2-4762-9b29-9a04c8dda711"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="1bd93789-423c-4b47-a1a6-8a823e25c071">
+          <propertyInstance
+            Id="2860db8e-42e8-4509-9ad5-ca1f1c5366b3"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -22,6 +104,12 @@
         Id="e5271b32-551e-4dd8-897b-821b614943c4"
         name="TextTemplateBindings" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="e9d637d9-7af9-4901-bdb5-5b670853dcac">
+      <profileInstance
+        Id="478cf406-e80f-4a14-a886-3305dc2d62d0"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
@@ -31,14 +119,57 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="525f3faf-5549-4801-b70f-b007e93a739a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f7c85bc0-c2a2-47f5-8cd2-3d719890ba10">
+                <propertyInstance
+                  Id="9f47ed61-656d-4e23-8067-42150404b637"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52a7dda2-7361-4630-9837-07bb88381269">
+                <propertyInstance
+                  Id="22f6ea7e-62c9-4aa4-a014-55dc18c0e119"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a262ae50-db10-4467-8a47-9314b6518ee4">
+                <propertyInstance
+                  Id="3f047e44-a169-4ada-8dfa-176d5afa57b6"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e13e27be-1d7b-44b6-b5a8-cfc1145f30c1">
+                <propertyInstance
+                  Id="6c9b12f8-d713-4251-a3b0-683f155258d5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1308a0c3-cff5-45ee-b568-e1fe82fdc47c">
+                <propertyInstance
+                  Id="1f71b4b4-9cc3-44d7-88a7-7d3929caf59b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <suppliersInternal>
-          <interfaceRealization
-            Id="e550750f-7cd0-42e8-a4d3-9ab3e245296f">
-            <interfaceMoniker
-              Id="3c4dffaa-05fb-481b-82e3-9de308295ca3"
-              LastKnownName="IPlayATurn"
+          <dependency
+            Id="5e572729-099e-40d7-bb64-2b6980b415c1">
+            <enumerationMoniker
+              Id="139fac0a-13bc-44be-ab3c-1c57e7dad67f"
+              LastKnownName="EAction"
               LastKnownLocation="ClassModel.uml" />
-          </interfaceRealization>
+          </dependency>
         </suppliersInternal>
         <generalsInternal>
           <generalization
@@ -64,6 +195,56 @@ l'humain se voit présenter le choix d'actions dans un menu.
 
 Il doit sélectionner son action pour que le tour s'exécute.
 Renvoie le choix du joueur.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e2ce08c2-b0bd-4d61-830b-8bdb8d5ed2e0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64115f8f-d2a6-450c-90f2-8424c2e44d1e">
+                    <propertyInstance
+                      Id="1475f407-df53-46af-b204-3b604c36f627"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92e309a5-6e4d-44c4-b3e5-c7a2c4642a7d">
+                    <propertyInstance
+                      Id="4e426931-61b9-4596-aa49-75f450bcc7cc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a25f2e9-4a25-43dd-92c1-057d354189c1">
+                    <propertyInstance
+                      Id="eaf83375-b48b-4369-ac55-9e4a77322df3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="678047bc-b6f9-4883-9ece-22d5412e2572">
+                    <propertyInstance
+                      Id="941c73c6-d851-4eaa-8d71-4d9186771418"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="301c25c2-106c-440d-bb10-3102af394a02">
+                    <propertyInstance
+                      Id="96fffac3-8c64-4c8b-bb9c-0433a1b30fda"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b25ffa02-3782-466d-b137-5bd5d6a92e15">
+                    <propertyInstance
+                      Id="5a83569b-c890-446f-b2ec-1d62cf7ba55d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -83,27 +264,63 @@ Renvoie le choix du joueur.</description>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <Interface
-        Id="3c4dffaa-05fb-481b-82e3-9de308295ca3"
-        name="IPlayATurn"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <class
         Id="a1555466-6a27-4ff6-9575-a89a28ed592c"
         name="AI"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fdd55fbf-3732-4364-a854-dbc07dadfea1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7dd43ea0-f315-418b-b8c6-a261b0581afb">
+                <propertyInstance
+                  Id="bffcaac0-019e-46fb-bb74-847757c9c591"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c0075229-1ddb-483f-a04a-8d5f491680cf">
+                <propertyInstance
+                  Id="440f84e7-9dc1-49ef-851e-b8a220c3ae03"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a4fb05f-96af-40e1-90c1-dcceb970e224">
+                <propertyInstance
+                  Id="b2862710-a6cd-43ed-81e1-18c691c3e210"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f9e40462-97d8-4652-990d-217e59d3a092">
+                <propertyInstance
+                  Id="c1b871dc-979e-49b7-8002-c9071880db57"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dbd5dd8b-870c-4884-9538-e5dd44c44cc8">
+                <propertyInstance
+                  Id="65cd8585-0dfd-45ac-b81c-9f18c692222a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <suppliersInternal>
-          <interfaceRealization
-            Id="786bfe4d-11cb-4717-9e32-d7192258a19e">
-            <interfaceMoniker
-              Id="3c4dffaa-05fb-481b-82e3-9de308295ca3"
-              LastKnownName="IPlayATurn"
+          <dependency
+            Id="f3c94d93-0dbd-4460-8675-88d9c959e2f6">
+            <enumerationMoniker
+              Id="139fac0a-13bc-44be-ab3c-1c57e7dad67f"
+              LastKnownName="EAction"
               LastKnownLocation="ClassModel.uml" />
-          </interfaceRealization>
+          </dependency>
         </suppliersInternal>
         <generalsInternal>
           <generalization
@@ -125,6 +342,56 @@ Renvoie le choix du joueur.</description>
             concurrency="Sequential"
             isQuery="false">
             <description>Doit déterminer l'action que va choisir l'IA.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="27a4d519-d920-4b78-967c-4f9944de1886"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="692bc9b2-4db4-4d9c-9bf7-f390dffd2652">
+                    <propertyInstance
+                      Id="dc5d07fe-99ab-4eeb-b0db-6e383f80ddf2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0002d9f9-3d5c-4393-bd21-eefe6135ae55">
+                    <propertyInstance
+                      Id="e7af403c-a5cd-45e6-a17f-ccd70d8ac9c6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56bdeda8-6b23-4351-9d07-d7d126e51d3d">
+                    <propertyInstance
+                      Id="c003f533-488c-409f-9754-bc74a07cc48b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="080b0621-8222-4179-9637-7e29f05598d2">
+                    <propertyInstance
+                      Id="c6f7fb50-b69e-453c-9924-ddd12ce89ff5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80e58cda-e9d3-49a6-a080-4ad612337205">
+                    <propertyInstance
+                      Id="d9519422-2680-43a8-a7d4-8b6d4ac8d867"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d90b5f3-2b10-4006-9c6a-5d979e92ed8e">
+                    <propertyInstance
+                      Id="7fef4058-ed67-4d34-9a0e-e816c7f6da65"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -150,6 +417,49 @@ Renvoie le choix du joueur.</description>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="17cfa48a-65d2-4077-890b-3b9e2a0abb64"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c9981ccc-2df1-4c9f-ae32-2cc5aeb59c74">
+                <propertyInstance
+                  Id="ff1037c1-9ca5-4aaa-9923-b20ad371dbfa"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8a1a1e8d-321a-4da3-9452-4f2706425734">
+                <propertyInstance
+                  Id="58e0da76-b3bf-461d-a779-f783541c0b37"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="952d3e68-d2ac-4489-80a2-476d758865ae">
+                <propertyInstance
+                  Id="de8fa75e-dd50-436a-99b5-06d55f9bd24b"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08826ad0-c69f-4954-bf80-bd936d16b7a9">
+                <propertyInstance
+                  Id="84414177-84b1-4c5f-b80d-74537e4e636e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b797626b-ae98-4d3c-8fd9-0dc0907a1be4">
+                <propertyInstance
+                  Id="4ef80f99-eb17-45a8-9f72-13cc581c18ae"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <suppliersInternal>
           <dependency
             Id="aa0e777f-00d4-49a9-a695-ef7a628b9e7c">
@@ -172,6 +482,63 @@ Renvoie le choix du joueur.</description>
             aggregation="None"
             isComposite="false">
             <description>Indique le numéro de la carte, c'est à dire son identité principale.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="254087c1-104c-4f51-8302-bc2d510fdc17"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="847e7ac3-bf9b-4458-bd6b-5757c277b1c0">
+                    <propertyInstance
+                      Id="485b1aa8-0bbf-4542-931c-0aff87e27bd7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82d69f58-fa5e-43bf-a110-c1c7119221d7">
+                    <propertyInstance
+                      Id="aa0d3307-c53d-47b1-8715-d14681d7adca"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98bae443-8873-43cb-9932-44164486cf2b">
+                    <propertyInstance
+                      Id="77800c02-3e32-4102-bda4-845c2ab20a9a"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1eec2a6d-bc91-41bf-9ca0-d33bdcdcb65e">
+                    <propertyInstance
+                      Id="85a79389-295c-4fdc-9f8c-fef0f23a757e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecf34f53-f12a-4d14-a6f1-68dc6a3bfba9">
+                    <propertyInstance
+                      Id="4609a4bd-43b4-4b68-ae8c-fc272aca79ed"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c7537cd-fa51-4142-ab40-a64f9c30d1fd">
+                    <propertyInstance
+                      Id="467ae7bc-6c2c-4a5b-a77f-bc00800aa719"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="182000fd-980d-4215-9b13-e9fe03e5899a">
+                    <propertyInstance
+                      Id="d8f69759-f154-49b0-ac0d-ce744125695c"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <primitiveTypeMoniker
                 Id="220a3521-e091-4221-bae9-3ef9018e845c"
@@ -191,6 +558,63 @@ Renvoie le choix du joueur.</description>
             aggregation="None"
             isComposite="false">
             <description>Indique le nombre de mouches présente sur la carte.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f8c86dab-fd55-4774-9ee3-0560363c5203"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a670f82-5f68-4d15-a4c3-1a20cde8e63b">
+                    <propertyInstance
+                      Id="f0c8d90a-c303-4830-9f4d-88cc01783ab1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5ba8c34-4a21-413c-b450-791d44a6e54b">
+                    <propertyInstance
+                      Id="a83efa5b-9f99-4d28-bc95-a37ce38cda13"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23421137-8fa1-4cee-8cde-62f52af609b5">
+                    <propertyInstance
+                      Id="d06becdf-50fb-4094-b9d6-69d8d070034e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88bceccb-c400-4c32-961e-c278e6e60be9">
+                    <propertyInstance
+                      Id="a8034d44-314a-4d9c-aaaa-1fbfd24a7478"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2791aa8-b8cc-4ea7-9c55-2ea2d39b1d9a">
+                    <propertyInstance
+                      Id="1f730b50-4250-4e7b-b275-f6c2601b91e9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bc0e41e-701c-47b9-964f-ac1762a556c5">
+                    <propertyInstance
+                      Id="324804cb-48f0-424b-b560-7e8e36ebfafb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="392bd4fb-a3be-4f67-b6b2-beb37feec9f5">
+                    <propertyInstance
+                      Id="d3181d46-a550-4307-a604-15f1a5ba5414"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <primitiveTypeMoniker
                 Id="220a3521-e091-4221-bae9-3ef9018e845c"
@@ -210,6 +634,63 @@ Renvoie le choix du joueur.</description>
             aggregation="None"
             isComposite="false">
             <description>Indique la catégorie de vache à laquelle correspond la carte</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="29826644-4d52-4cf2-89a6-dbe36f2e4142"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee394f32-ddfc-47e9-891f-6576b07a92bd">
+                    <propertyInstance
+                      Id="9847d600-6430-4dc0-8897-1f0797102f1f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f97cb50-e1ef-4495-843e-936ea286bba0">
+                    <propertyInstance
+                      Id="3974cfa0-9105-48ca-832f-2656f19a620f"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e303a63-ed01-475d-9c60-98b133f0eb60">
+                    <propertyInstance
+                      Id="b7a7eeec-5394-4578-9231-1fcf3d1161ee"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9313c16-a834-416b-ab2a-e6ea7fcb1522">
+                    <propertyInstance
+                      Id="9d91e430-f24f-47c1-a03d-0526be22654a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aec396f7-cf50-4c8c-8c94-94ab2e5a60d7">
+                    <propertyInstance
+                      Id="00c6af36-beed-48c6-8eeb-68e8da058d92"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c830bccb-4d37-4418-9f3b-731669a46bdb">
+                    <propertyInstance
+                      Id="7f30c153-adc3-4ba3-b06a-0c844ec6d258"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3f88bc0-a328-42f3-a8de-c00cafc76336">
+                    <propertyInstance
+                      Id="fc128a15-f550-41a9-889c-2b6dfd677c50"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <enumerationMoniker
                 Id="46d25d09-be10-42c2-b967-2a8589bad743"
@@ -226,6 +707,35 @@ Renvoie le choix du joueur.</description>
         name="ECategorieVache"
         isAbstract="false"
         isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e99fa7d2-7bb7-4702-b2d3-0af95030a118"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="80e90f5f-a284-45aa-a49f-231eef48b98f">
+                <propertyInstance
+                  Id="21fa76b6-a315-4113-aab9-dc474bcd0eda"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="02f9b8ab-74ca-4f5c-8a4a-782a32253519">
+                <propertyInstance
+                  Id="229a0edf-4496-4dbf-a777-da04d6ef9a2c"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3009101b-fb57-4026-9478-92fa191fb1a2">
+                <propertyInstance
+                  Id="167d7306-2c4a-4db0-aba8-4066053a0142"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <ownedLiterals>
           <enumerationLiteral
             Id="fff73e05-b3e4-4851-b8a7-62059e218aaf"
@@ -282,6 +792,49 @@ Le nombre de tour est illimité.
 Chaque fois qu'une manche commence, on génère une pioche à partir du Deck de jeu.
 Puis on distribue 5 cartes depuis la pioche vers la main de chacun des joueurs.
 Les statistique de la manche sont conservées.</description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7598d3ce-e2e6-4551-b028-4ae7d05b56fd"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2e81caee-8b29-4337-8003-785f3e71d2f2">
+                <propertyInstance
+                  Id="45f1e567-3c93-4188-a771-095dbcb1d48b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="03791471-9ac6-4e15-a2c5-256a4025aa76">
+                <propertyInstance
+                  Id="f969a698-136d-4db1-a712-fb70f077ac01"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e89eaa36-eac3-43eb-b532-d1ed1563fec4">
+                <propertyInstance
+                  Id="f77cf1f3-5237-43fe-9132-040b61e1da63"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cba8c077-d7c9-4342-bec2-17d3f8c62e4a">
+                <propertyInstance
+                  Id="8ef2b320-12ee-4c04-92d0-a6ff079e9abc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fae4f02a-c296-4ac8-bd40-2a9c1ab7e462">
+                <propertyInstance
+                  Id="c20640b6-eef7-4824-b756-0fd5e767109b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <suppliersInternal>
           <interfaceRealization
             Id="a74efb54-8fe6-4ec3-9781-44a4413456fb">
@@ -304,7 +857,7 @@ Les statistique de la manche sont conservées.</description>
         <ownedOperationsInternal>
           <operation
             Id="7de40053-58c8-44d4-a913-fd5f597821a4"
-            name="est_fini"
+            name="est_finie"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -316,6 +869,56 @@ Un joueur ne peut pas jouer une carte, et ramasse obligatoirement le troupeau.
 Ou alors un joueur décide de ramasser le troupeau même s'il pouvait jouer.
 Les joueurs peuvent continuer jouer sans piocher, mais ils devraient être incapable de joueur assez rapidement.
 </description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="55bbfc86-8587-4797-9cf5-a5319359178f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2dece2d3-92d2-46d8-9702-73d749a28d71">
+                    <propertyInstance
+                      Id="bc452bdf-d528-44b3-a1d6-fc79a104fd11"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="753fb59d-e13f-4704-b1e7-ba70c139b6bb">
+                    <propertyInstance
+                      Id="b66ee1d9-2744-4645-8d74-c93808ab554b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d68bd31e-7d71-49bd-a700-2f4091ab1b3e">
+                    <propertyInstance
+                      Id="58ee671b-294c-466b-af4a-1f6e24075968"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0849440-401b-4f63-8681-fb92108b7c1c">
+                    <propertyInstance
+                      Id="9674d390-ab9c-4ef9-8fab-5425506ab225"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d115c750-f5dd-45fc-a7d7-7bca8be4633b">
+                    <propertyInstance
+                      Id="42cd3e6b-dc57-40eb-9b5f-78c3aa9b8d4b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e8de1cb-7942-4ec0-93f9-c4c4a8b16378">
+                    <propertyInstance
+                      Id="8e174d7b-3344-4097-bcf9-0b89ba282504"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </operation>
           <operation
             Id="158384d5-dcf4-4183-937b-503902f7c6f2"
@@ -325,7 +928,59 @@ Les joueurs peuvent continuer jouer sans piocher, mais ils devraient être incap
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <description>Dispose de manière aléatoire l'ensemble des cartes du Deck de jeu dans la pioche.</description>
+            <description>Constitue la pioche à partir de la liste des cartes du jeu.
+Les cartes sont séléctionnées aléatoirement parmi les cartes non encore utilisées et sont ajoutées à la pioche.
+Il n'y a plus d'aléatoire une fois la pioche constituée car les cartes ont été ajoutées dans un ordre définitif.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="59e54f1f-98e7-4dd4-9ad1-485991c6c555"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a83c4c7a-4af3-4d6f-8d01-69a346158365">
+                    <propertyInstance
+                      Id="bc223286-69f8-4a62-becd-bc8ac3265fca"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6ee617f-9333-460b-a461-3f2d988ccc7d">
+                    <propertyInstance
+                      Id="503b8167-62de-4495-a669-45630bf09be8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d959398-8758-4fd4-816b-7a63933226eb">
+                    <propertyInstance
+                      Id="610a3489-b30a-4e0e-a49c-01303cbf8645"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3aa9ea25-6871-459c-b2ae-3833236d693b">
+                    <propertyInstance
+                      Id="e3141919-ec93-49d5-a24d-bb2cc20194d4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="741b3b6f-a40d-43b6-8ae1-18cda07145b2">
+                    <propertyInstance
+                      Id="06252809-714e-4695-9796-60eab09825a2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2cb6384-fc1d-4cad-bca7-d061fea3e492">
+                    <propertyInstance
+                      Id="48f963df-36c8-415e-9de6-a160f9bb3d58"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </operation>
           <operation
             Id="49d55670-6fef-48e1-9131-cd1ffb08ee30"
@@ -337,6 +992,56 @@ Les joueurs peuvent continuer jouer sans piocher, mais ils devraient être incap
             isQuery="false">
             <description>Effectue 5 fois, pour chaque joueur da la partie:
 Enlève la dernière carte de la pioche et l'ajoute à la main d'un joueur.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8c26117d-cf01-414b-88f4-4ce6d0214714"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="855dc847-ce7b-43e9-9201-7f6261749ac0">
+                    <propertyInstance
+                      Id="60baf456-b3aa-4996-8fb6-a072eadc05b1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f99a2dce-85f3-47a5-a73b-6abb0621a174">
+                    <propertyInstance
+                      Id="7f55e314-5509-43a5-8a30-aa7f27413b75"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef712e59-b65b-41c0-afeb-0b365fbea137">
+                    <propertyInstance
+                      Id="fd367bec-ab99-49fd-a3f7-78b599cd46aa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ade44221-d461-4886-8d98-97b3df0ad569">
+                    <propertyInstance
+                      Id="8b49c1fa-4b2d-4970-a2e6-49b0d79a7005"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="757ec761-312a-4000-be54-937d02393272">
+                    <propertyInstance
+                      Id="24f1a706-d2c6-410f-8b39-aefa5b9a4997"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df6fc64f-af7c-4aa7-893e-23328fbd845a">
+                    <propertyInstance
+                      Id="c11e1924-122c-40a1-bc4c-06b060e8e9d1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -348,15 +1053,102 @@ Enlève la dernière carte de la pioche et l'ajoute à la main d'un joueur.</des
         isAbstract="false"
         isLeaf="false">
         <description>Chaque état du déroulement du jeu a sa propre manière de finir.</description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="54b84f70-c65f-427e-b43d-c2a5fca6a542"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c8cbc87-2421-4778-94d1-bd91d251780a">
+                <propertyInstance
+                  Id="2aab16cf-fb8c-4eeb-b296-4f1861476690"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="018f280b-225b-4b11-9ad2-a635ba9fcc7d">
+                <propertyInstance
+                  Id="e0bb3cf5-a149-4eda-8072-4ce113fc1b6e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cdfe4a81-4247-43a3-bc7e-ad1910415dbf">
+                <propertyInstance
+                  Id="4465468a-ff8b-45b3-822b-48ebae2d14e1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="823d7cf7-f5da-4e0f-8642-1b45b2861018">
+                <propertyInstance
+                  Id="711051af-d888-41bf-9699-7c456decbbd8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <ownedOperations>
           <operation
             Id="d849513c-6b34-440b-a996-badd5a22adf2"
-            name="est_fini"
+            name="est_finie"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="00f78d1a-8bd6-4833-b596-bbf8557f104b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a29e1b8-62e2-44a6-93be-f3f240bf4d9c">
+                    <propertyInstance
+                      Id="b47af618-2ebc-4980-a808-a93fad028281"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83efb976-ff7e-4d4f-bf92-5d4928d99121">
+                    <propertyInstance
+                      Id="ad7562a6-19b5-4d8c-b4f0-da7c60b52011"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6d36be5-12b6-4ec4-854f-36fc54f57f1f">
+                    <propertyInstance
+                      Id="d7dbe73d-0aab-4409-b9c3-91db52704c71"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab016272-98e1-4b26-840a-a526187ccf58">
+                    <propertyInstance
+                      Id="1bc8c584-a9e1-4ab1-96cb-2fc508ca81cd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c4ee88e-e212-47f5-8033-7c98e97789ef">
+                    <propertyInstance
+                      Id="f4477b5a-779b-4636-8c57-c1f745c9568d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1db4f52-63a4-4bf6-b469-eb33602d553f">
+                    <propertyInstance
+                      Id="bc83939a-ce7c-4617-93ad-8554eec9d231"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
         </ownedOperations>
       </Interface>
     </packageHasNamedElement>
@@ -370,6 +1162,49 @@ Enlève la dernière carte de la pioche et l'ajoute à la main d'un joueur.</des
         <description>Le jeu se termine lorsqu'un joueur atteint les 100 points.
 Il peut contenir un nombre de manches limité mais indéterminé.
 On peut traquer les statistiques de l'ensemble d'une partie.</description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="39b48a14-c232-41ac-8d83-ff4f9f8cb3d5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d23e448e-1b94-449f-aa40-a144c9c982f6">
+                <propertyInstance
+                  Id="dbeb0fa0-705a-4188-b592-4104581430b2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="868ff1eb-e683-47bb-bd5c-02122bb6817a">
+                <propertyInstance
+                  Id="e7fb6302-e4ff-415f-bec1-068eaff641bc"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3ed6db4a-3d3b-4b9f-bf04-1623d3e923cd">
+                <propertyInstance
+                  Id="9d59558c-8b90-41ee-b9f9-1b66861672f4"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="34528365-c9c7-4686-8bdb-a91dfddec9e7">
+                <propertyInstance
+                  Id="66c730c1-4379-4ac8-a438-c23990279f9e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2181394-2d09-40fb-b5f6-3e6b24ec251d">
+                <propertyInstance
+                  Id="cdd0ecf9-082f-45e6-ab7d-8ccc0f0600e2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <suppliersInternal>
           <interfaceRealization
             Id="9e8d2ffe-0e6e-4bdd-8472-c458333512a7">
@@ -400,7 +1235,68 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <description>Nombre de joueur dans la partie.
+Choisit au début de la partie.
+Affecte l'affichage de la table de jeu (sa disposition).</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="90b229ac-3e43-4310-995b-73f336b44528"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b92d2795-8e1a-4435-b477-94d0457f4925">
+                    <propertyInstance
+                      Id="2ac9c345-8ee4-4a04-9599-e27aa07fc2d2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0d39473-e1a6-40f3-9fbd-d163bb63f9e2">
+                    <propertyInstance
+                      Id="e0b05014-baa0-43d0-8f3b-6a3e820ce01d"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad1e0440-2a45-414f-8c2f-dc0dbe332f29">
+                    <propertyInstance
+                      Id="6760e8ef-62f0-426f-8d68-4b70c87a3227"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35318882-078d-4a37-a0cd-7a2b6a939653">
+                    <propertyInstance
+                      Id="f5716ffa-33eb-47ea-a40f-0bb340e59bd9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="efda6683-00e0-4f1d-97d3-90e4b25e48c3">
+                    <propertyInstance
+                      Id="852247e6-2cc2-4d25-9e2f-368adc89dd9f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac19798d-4777-4fe4-b618-ee135de88dd9">
+                    <propertyInstance
+                      Id="6cc81749-0626-4743-8836-240de2b3acbd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b143ff5-ab81-41fd-8726-0bf4e108914e">
+                    <propertyInstance
+                      Id="2f766218-21f4-4375-aa39-8377c59fa5fe"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="108c960c-75d9-4f87-b33a-a4dc7dc0cacf"
             name="nb_manches"
@@ -411,18 +1307,351 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <description>Indique le nombre de manches terminées à un moment de la partie.
+Initialisé à 0.
+Incrémenté de 1 à chaque fin de manche.
+Bonus: Peut servir de motif de fin de partie.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6174ce28-4301-421d-8667-a6f6a62b0c1f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c76b6a0-612c-4332-a0c7-3f2f86e33b4f">
+                    <propertyInstance
+                      Id="1df234e8-15de-49f8-90b5-42638207b7e6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24ad510a-dfc6-45ac-a35b-470a20c06222">
+                    <propertyInstance
+                      Id="3ec36896-1663-4de6-9486-ad4e38c3b06f"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e30eab6-256c-4941-81fb-b1d274426579">
+                    <propertyInstance
+                      Id="2232858a-9d63-4436-9960-d4af144c8141"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06ff240d-a2e6-4322-b189-f696b8e7500f">
+                    <propertyInstance
+                      Id="112f9c7b-2759-4a60-9766-7125c250a123"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2f6cffa-ad41-4d32-8ff0-a5b7b796b6b2">
+                    <propertyInstance
+                      Id="e8557f28-aaad-4635-8cf5-2a5525dfb798"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2330f5e-bdc7-428c-8faa-eda93fd9fb8b">
+                    <propertyInstance
+                      Id="67253c25-180a-437e-8f2e-2dbd1b652f74"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76bd1042-52a0-4bd6-bfe8-d563ee129e77">
+                    <propertyInstance
+                      Id="e1807c39-8034-47be-a0ad-f0601c897221"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="1dd6dc9e-2aab-4400-98a7-73110fadc47c"
+            name="SensDeJeu"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Indique le sens dans lequel la partie se déroule, donc le numéro du joueur suivant.
+Par défaut, le sens est horaire, autrement dit, on ajoute 1 au numéro de joueur actuel.
+On passe au joueur 0 si le joueur en cours est "nb_joueurs-1".
+Si le sens est antihoraire, on soustrait 1 au numéro du joueur actuel.
+On passe au joueur "nb_joueurs-1" si le joueur en cours est 0.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2f8446d8-6b8c-4bf4-89c3-faa0470e417f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4516cc7f-a7a1-47ab-ae55-8fed073d42b2">
+                    <propertyInstance
+                      Id="927579b0-0fc1-4010-a290-18323b34f00f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="905b5a41-27fe-423e-b03d-267c7fff90c7">
+                    <propertyInstance
+                      Id="e117b1a2-0613-4b95-88c7-3c3d8850b294"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a01bf5f-ad66-4ee5-af99-24b2da9889ab">
+                    <propertyInstance
+                      Id="5ba94f6c-d4e9-465d-8b32-e1478b7bbbd2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="008aee17-b196-4a13-a214-e592e4628ea1">
+                    <propertyInstance
+                      Id="0db41401-d390-4287-b72e-9529d45de4d2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95dc9f39-a046-403e-844a-28aa50fc42b0">
+                    <propertyInstance
+                      Id="5e2f6ac6-f490-4af8-bdee-7436aea37f5d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08460c28-8ea3-4a86-84a7-59cab7a96044">
+                    <propertyInstance
+                      Id="27785229-367b-44d4-aa42-c192d80c570d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b139f7c2-481b-487c-bdee-48f5b818f83f">
+                    <propertyInstance
+                      Id="c4e107e8-cbea-4a5f-afdc-37414a470bc3"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="65764ace-a19b-4cf5-9dca-8fb9ab189fc6"
+            name="JoueurEnCours"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d330de58-ff20-498c-9fb4-ab17729cbb48"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74d3cbb9-8b28-4cc3-a182-d3d28430aad6">
+                    <propertyInstance
+                      Id="5add5618-bbf7-4459-8dbc-26dc7e5b55c0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a468de06-cfa6-499f-9e9c-a3add80f95bc">
+                    <propertyInstance
+                      Id="a9a8349d-e9e1-4dcb-a906-29685e257c86"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db697199-2c2a-4cc4-8cbd-a14ba08f583c">
+                    <propertyInstance
+                      Id="a3fa1227-b461-44d4-a0e2-ba769526d21c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6490867-c128-4d7b-8a46-ee971df16099">
+                    <propertyInstance
+                      Id="27c9de8b-8b57-4ea2-b59c-133844c631a0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b871bd3-16e7-42a4-90a8-e70afa9b7219">
+                    <propertyInstance
+                      Id="368ba0c4-c1fd-49bd-bdc9-cb9e67f389f1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b285f744-b0aa-401c-af88-727b1d924fe2">
+                    <propertyInstance
+                      Id="049ab374-91fb-415d-82a1-cf3953188e29"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="704469bb-dfb2-40e6-be53-48a9b2becca3">
+                    <propertyInstance
+                      Id="6d29ee8d-8f8f-4071-9137-af16ca2961f5"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="1154215d-67fa-4405-9be4-a13fa9e634ec"
+                LastKnownName="Joueur"
+                LastKnownLocation="ClassModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="df078f83-dc65-442e-9685-36e01480fcf3"
+            name="nb_humains"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Nombre de joueurs contrôlés par des humains.
+(nb_joueurs - nb_humains) indique le nombre d'IA.
+Choisit au début de la partie.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="843f050f-c9ac-4b5d-ab5e-84f5bf3137fa"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ec59cda-40d3-4233-b63c-70d5b9b50e84">
+                    <propertyInstance
+                      Id="274d9e57-d411-42eb-89ee-2d35d1b9e975"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b48eb9c-7101-4d20-9c2b-f6c7e9662af4">
+                    <propertyInstance
+                      Id="162c0aa6-1ca5-4147-b8d9-5961dfa5eb6b"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e18bbb6-3308-4c3a-8452-020f216d9178">
+                    <propertyInstance
+                      Id="7bdc30a6-12bc-4ffc-a562-3a7cf704b0c6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="790aa57c-7ae2-4d49-ae54-bc5cd0cb971d">
+                    <propertyInstance
+                      Id="9356e607-a339-4a2c-a1e9-0a3bedb3156d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bfdc357-b90f-4d0e-89e3-ea9a02fe775e">
+                    <propertyInstance
+                      Id="8caf8eaf-2b64-4892-8fb7-4fff69b41b62"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b085c05-5377-41bd-92f5-29f1f27d5bea">
+                    <propertyInstance
+                      Id="36a66ced-6b07-43ef-9c4c-b9cfb5f34ee5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b88ac7a4-979e-4a66-a678-d74fdd3c5a95">
+                    <propertyInstance
+                      Id="0c948db1-bd48-43c0-8939-57a9c21d5e7c"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="46407eb7-55ec-4634-bed1-51ae4ecd4f36"
-            name="est_fini"
+            name="est_finie"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <description>La partie se termine lorsqu'un joueur atteint les 100 points.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="670604cd-ab6d-4724-a7cb-6a89c4310822"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb41ecfe-a8bd-49bb-8174-f706e03856c1">
+                    <propertyInstance
+                      Id="9e39cf73-b57a-4c53-b49e-5f7dcd9190f6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76dec834-18c5-4487-8539-d1a6ee6a1df5">
+                    <propertyInstance
+                      Id="600f2244-22bc-418c-ae59-a658949080fc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d81db7c7-8ed9-4de7-abb6-714f0cf1cddb">
+                    <propertyInstance
+                      Id="d81f2055-a325-4d91-8135-226d152d454a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="269b2e48-7d3f-4687-85b6-feaab57bea35">
+                    <propertyInstance
+                      Id="2942c580-30cb-4a76-83bb-d4f19a630eba"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34df4396-2be6-4253-a86a-5104cb971cb5">
+                    <propertyInstance
+                      Id="e91603da-c181-47ce-b2a4-1e686b8d9f61"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="323335f0-4606-4b86-9d53-61ebf6e93ea4">
+                    <propertyInstance
+                      Id="4220e33e-52bb-4ba2-8a86-1bc9d877085c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -457,6 +1686,35 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
         name="ESensDeJeu"
         isAbstract="false"
         isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="87a49e39-6b00-42ca-a9d8-cabde19aa63b"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6213fb18-e9b6-4e42-bc1f-cde38a75e1b8">
+                <propertyInstance
+                  Id="8792b2df-82a3-4aa1-9cb6-944490b1d4bf"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bab95698-1409-4c8b-8922-02ab7c866342">
+                <propertyInstance
+                  Id="ac273f7f-39dd-4403-81b6-a368306d9d2f"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ac2339f0-80f4-400c-8c9b-05306cafe09c">
+                <propertyInstance
+                  Id="20e4140a-6de3-48c3-b9b6-8429eaee3272"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <ownedLiterals>
           <enumerationLiteral
             Id="75807068-1718-4a18-adee-62982c163f10"
@@ -488,6 +1746,49 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="caddd5b3-c894-4944-af3a-06855773953a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cf10fa39-3317-454d-980f-43aa7895285e">
+                <propertyInstance
+                  Id="ca28d8da-85d6-435a-ad37-4a8ee1baf527"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cd4cea95-1cef-4382-b447-303321868672">
+                <propertyInstance
+                  Id="55c24a15-60ec-471b-90c0-ccff6781f380"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="25a24af6-e450-45b0-a718-e7f714fbc0cc">
+                <propertyInstance
+                  Id="f5cab8e3-298f-445c-b712-ee3f27b3c7e1"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d0b6f3a-2027-4c0f-8ef4-3305adc18667">
+                <propertyInstance
+                  Id="e982a2ff-24d4-4f3d-8c07-d3de891b09e4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a9be7714-9bab-45c9-b800-1b3d45fd718c">
+                <propertyInstance
+                  Id="ba8ebf2e-0722-429b-8e7f-9ba742f7808c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <ownedAttributesInternal>
           <property
             Id="eb8b7529-a2ab-4679-b1a2-ec69c4569cf8"
@@ -499,7 +1800,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5336bee9-743a-41d0-9527-84b5b5a2d630"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28cf9825-4dbb-46e3-9429-6b119fca1025">
+                    <propertyInstance
+                      Id="3fc441df-fe55-45cc-aed1-0da22cfff495"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7dc48dc-29a4-4a9e-97f3-d799801c504d">
+                    <propertyInstance
+                      Id="1a03d145-95b1-4aa0-87e5-02821eab900a"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37b6feae-027f-4f5d-8a6b-859601db405f">
+                    <propertyInstance
+                      Id="5b892024-fff1-45d6-ba39-22f0d18f96db"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7ec6bb4-114a-44e2-94ec-738720b74a25">
+                    <propertyInstance
+                      Id="6b9e43f6-cddc-41c3-9e18-2774cebe77db"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ded175b-97b5-4a25-a95d-4d24510a3bb0">
+                    <propertyInstance
+                      Id="b31fe81f-7dc7-4582-8ca1-c86e818465df"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2411baea-807e-4834-8d86-909c1f5d7f6a">
+                    <propertyInstance
+                      Id="ffb76844-6784-4d96-bfcb-80dbf512d97b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf44221e-f88b-4bfd-b874-ddbf929b6721">
+                    <propertyInstance
+                      Id="77dfbacb-285a-46d5-8dbe-930ff05ad164"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="c6c78344-e43c-4c14-8f1a-c1a565b3feb7"
             name="max_cartesTroupeau"
@@ -510,7 +1869,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f243c1af-1659-4139-aeec-6ca9f6a98b59"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5919cb8b-277d-436d-9b42-22b5a796de0c">
+                    <propertyInstance
+                      Id="9111bf86-d1e4-487b-8d82-5a6d3e9edd54"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76b6d274-031d-4723-8efd-1920207d6a23">
+                    <propertyInstance
+                      Id="6cfeac43-cbe9-418f-98f2-16caeb1058df"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5cf25e68-ec99-4d78-bdee-966ec12b0bee">
+                    <propertyInstance
+                      Id="e161eaff-5aca-48ce-9a22-5a5ee02425bb"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="959fa950-fb6d-4547-ad64-061a9081c582">
+                    <propertyInstance
+                      Id="e886909b-a832-4147-8ef4-735d412ff4dd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e16f7861-c81f-4e9b-924c-b3ad0ad73920">
+                    <propertyInstance
+                      Id="05a341ce-726f-4546-9d30-33902a0bc00d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b4f9166-cab1-495a-a221-f41f5cea09d1">
+                    <propertyInstance
+                      Id="a5af234e-59e4-4e73-b350-7bc7329985cd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3b91efa-1caf-4e81-b589-bbb51b973769">
+                    <propertyInstance
+                      Id="644425b0-a094-488a-a6c7-1758992b290d"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="e247c9aa-eb6c-41f7-8bf5-d5b9ccd27a96"
             name="max_mouchesRamassees"
@@ -521,7 +1938,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4f1579fd-2a76-4a9f-967b-dc8c702677bb"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc3b2dd5-8151-4666-b27d-877e51f03aa4">
+                    <propertyInstance
+                      Id="bdc05fcd-04c7-49b3-b59a-1c1253e932ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba7d7a80-44ec-44c9-9487-67600a7d4e72">
+                    <propertyInstance
+                      Id="0740fb8d-56eb-4bde-bab8-020c5fb42c10"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="407ca8eb-f427-4487-a15f-7b7cf2aec59d">
+                    <propertyInstance
+                      Id="a77aa19f-2d5a-4df8-a8f3-197b4c6e87a4"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66c13a46-68a5-42c9-afb4-451b65d61488">
+                    <propertyInstance
+                      Id="1961712f-8a5a-4826-92f4-24c9562f9895"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71643d77-3b39-467d-922f-9d5abd16029a">
+                    <propertyInstance
+                      Id="971e418c-f636-49d4-b7d9-719d22b657ad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63e7a5a1-fa83-48b4-8a61-6124b88221c6">
+                    <propertyInstance
+                      Id="466b5009-6c70-473f-840f-332618e80d1c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b25e548d-f2be-4db3-aacc-1ef34341af47">
+                    <propertyInstance
+                      Id="4d95f5c6-5d35-47b0-be43-eee76d799a8c"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="a4aa4d7a-0aaf-49a8-b68f-41525d773bbc"
             name="min_cartesRamassees"
@@ -532,7 +2007,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e40f439f-87f9-4ed7-afcc-b6dc2a887dc3"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="962a2b78-8a6b-4982-9624-d5b1b033f0b7">
+                    <propertyInstance
+                      Id="623b343a-8bfd-43bf-8cd7-d7f2907ec787"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb471f24-3258-44b2-90e2-7943450e651b">
+                    <propertyInstance
+                      Id="0a79e89f-e2f1-48b0-9b0d-04d23c338680"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5062069c-decc-4b7b-9b21-b6840bfbef4b">
+                    <propertyInstance
+                      Id="c2d3960d-5ba9-42ec-a3e9-bac364dcb3da"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="567af127-bb41-430f-8a98-57fe9c1bf431">
+                    <propertyInstance
+                      Id="b8c73bde-418e-4e42-9f88-a666027b5514"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00bb6899-bf10-445a-87e5-8ef9c1f4f891">
+                    <propertyInstance
+                      Id="bc923650-88d1-402d-84e4-501176ab797a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20acf0fd-16c1-4b60-8419-dbdb0301e87d">
+                    <propertyInstance
+                      Id="2bd9af4c-38de-4fa7-9c34-0f66ace818f0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae559585-6c33-4e2a-9ce6-823ba3b954c6">
+                    <propertyInstance
+                      Id="827fdcb9-7cbf-4a93-b027-f14ae7270201"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="e2f2b470-aeae-4769-a94f-c7c24096342f"
             name="min_mouchesRamassees"
@@ -543,7 +2076,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a2a2bdf0-496b-4d17-968c-39f77e54335f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5b48558-a0c3-4f7b-aca1-3bd99b111e4d">
+                    <propertyInstance
+                      Id="35148251-1a8b-45b9-8733-13faa53d062c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc7c982c-8f14-4980-8406-4746e0a267d9">
+                    <propertyInstance
+                      Id="cd650546-4e57-47ec-a394-20ec1b7a7cd9"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b69be4e3-6ba9-44d6-a285-db964c51d670">
+                    <propertyInstance
+                      Id="50cc8cd4-2b56-4aa9-bef4-fd875b5dc75d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea01ce89-197e-4173-a7df-0bf14b0ec664">
+                    <propertyInstance
+                      Id="aa8f4d33-f9cf-488a-9860-09a8acc51fd8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba0a7fef-9153-4915-a8ee-5fdb4b8cdb0e">
+                    <propertyInstance
+                      Id="94cb283d-1cf9-400e-be9d-228e3102764f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="918e1e63-c63b-4052-8c9a-d7da8b370741">
+                    <propertyInstance
+                      Id="0c101f70-dce4-494c-b464-70d22c187beb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c8dd785-4830-4814-b288-ccf60651a09f">
+                    <propertyInstance
+                      Id="4acee1f3-e3f4-430c-ab4a-88e51034a85a"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="117552ad-29aa-42e4-8fd8-d3c89b6aa9b0"
             name="nb_cartesJouees"
@@ -554,7 +2145,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="90311c2c-5f37-451a-83fd-83668cc66b0f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7cd6150-4e4e-4890-a2cd-8b00ebcbc1ec">
+                    <propertyInstance
+                      Id="54159a86-1b13-4301-95ec-aa81cd2986e5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0383ef09-c8b2-43b3-8a3e-22f2657cf8ed">
+                    <propertyInstance
+                      Id="8f8a3a23-7779-4feb-944e-31bea1f21b3c"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a09a311a-f1fd-4ea7-ad18-0a1c3a6e32de">
+                    <propertyInstance
+                      Id="9880675d-934b-4f56-b1ee-05be2a2ffb75"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1a6983e-01c1-48f7-b2cc-59da1fdd68a2">
+                    <propertyInstance
+                      Id="29813848-ee5b-4c03-aa2c-3edc9dcaf00b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0333953-bae0-491e-a30d-58bd8876055e">
+                    <propertyInstance
+                      Id="8d578036-5c2d-43b6-8f65-e5199bc100d2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97e2f533-4a50-4710-8c6f-41021e2871b6">
+                    <propertyInstance
+                      Id="c75fd7d0-10c9-4479-ae01-78a2cb24f8d8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d31ef96-b006-4a40-90b3-f0a9591b3674">
+                    <propertyInstance
+                      Id="9fb48f06-315e-410a-9513-54eb994453d9"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="d58b62bc-30e1-4cb0-95a5-abd21f35217d"
             name="nb_cartesPiochees"
@@ -565,7 +2214,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fd1d2e90-834a-4304-a8d1-460980e0dc3a"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b200cd30-5efc-4cf6-8aa6-f59807d2ceaa">
+                    <propertyInstance
+                      Id="dd9570d2-5b5b-4a7e-a656-796371b9bc34"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="473b900b-ec35-486c-91ca-307e78fb1a87">
+                    <propertyInstance
+                      Id="b83d0e56-eac6-4d21-aa33-bbca8b54a1f2"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="571ee752-6297-4b48-a68c-2df5658c41dd">
+                    <propertyInstance
+                      Id="f4789ef7-7f9d-4ced-8966-d1e384964120"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcfe90ff-168a-4d10-8820-f78defbbbc5b">
+                    <propertyInstance
+                      Id="23ac19db-4a95-4766-abb5-b99c33f5481c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bc0e4e7-88df-474f-882e-93ff3023783f">
+                    <propertyInstance
+                      Id="64db1ed4-e251-4064-b1a5-594ae3e49508"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a03af722-bd90-4abf-8fbe-bb6df67ddd28">
+                    <propertyInstance
+                      Id="0b6c678e-fd57-4abc-a3c8-9eaf92f40e8a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f2b83f8-cdb4-48a0-9a9e-83383d96f567">
+                    <propertyInstance
+                      Id="9c054165-e6db-4f70-b2a0-5a303db6ce7a"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="78cf2a25-63e9-4345-8cf1-746c5b569b1f"
             name="nb_cartesRamassees"
@@ -576,7 +2283,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5c020ca1-2d8c-4965-86a5-1a098c69d50e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a90d092-5739-409b-8d14-e3cf5801ad98">
+                    <propertyInstance
+                      Id="92132c95-4a0e-4864-8422-0f84cbff0e9c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="382b884f-a1f0-4351-acbc-4c3ecb8961f3">
+                    <propertyInstance
+                      Id="344705bc-f524-409b-9f7d-f1b9208d4c52"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="317e6429-e696-403a-94bc-f0220083cac3">
+                    <propertyInstance
+                      Id="bbe29f70-4a71-4094-a5df-b40e4828fdf8"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22483c63-af55-45b6-bac7-2b1e32be4385">
+                    <propertyInstance
+                      Id="39647e62-4ba8-4523-acaa-3a61d64f5a25"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee31d754-81f8-4cd8-95b6-f177a971f6e2">
+                    <propertyInstance
+                      Id="8fcb3e08-8fb5-401b-ae58-c54aaa7ad92a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6d32e3f-2dbd-4fd0-8954-607164e4241d">
+                    <propertyInstance
+                      Id="ef750aab-3e97-4ffe-8425-0c7fc8eb40e7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df3ca467-af5f-464e-9cf1-6209ac6d221f">
+                    <propertyInstance
+                      Id="c39e237b-4459-47fb-992a-412e9d8f348f"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="d5c00806-3514-4233-aa80-bf39d3990927"
             name="nb_changerSens"
@@ -587,7 +2352,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3163fe18-9b6d-4a92-ad8e-82db80dcd3ae"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="704d472f-0efc-4f0c-83e6-4735c62f01f2">
+                    <propertyInstance
+                      Id="d04a65c4-7a6c-485e-995c-d762ebd0de82"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85c0ec31-bbef-4807-92f3-a4223ed3bf9b">
+                    <propertyInstance
+                      Id="e9b7eca0-f6ea-4af6-906a-804583e54620"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f0c31db-2385-449a-a606-4d4a016f57f3">
+                    <propertyInstance
+                      Id="cd33008c-d449-4a50-8acd-bb2cec770813"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d87e5f48-64a1-41db-aa73-c5460116573a">
+                    <propertyInstance
+                      Id="9044925b-e0e5-4a5f-8150-a90b01d48c5d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fb75212-5ccc-4c81-b32e-87526bb8a9b9">
+                    <propertyInstance
+                      Id="637f4e70-c9ac-4b30-8815-03a989b652cc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff1a561d-a89d-43a2-9084-aaee33033979">
+                    <propertyInstance
+                      Id="1ebabf83-001a-45c4-9647-52f8cd934f75"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88bf224e-491d-4f98-84ba-32bbce8ba725">
+                    <propertyInstance
+                      Id="47cfe7d5-a1b9-49f0-b767-c2fe2e46dd9e"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
           <property
             Id="1d250116-0e57-4bff-92ed-5b1eb2794a5e"
             name="nb_troupeauComplet"
@@ -598,7 +2421,65 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="08547af5-3e05-44a7-a56f-16f46912d06e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33c92d7d-a120-4f0f-95d1-2b8e3b69b35a">
+                    <propertyInstance
+                      Id="d661a321-2c6b-4d7a-9549-516240716a08"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2066080-636e-4ad4-a8c5-c4886ab0ae71">
+                    <propertyInstance
+                      Id="76c2513d-ee48-40a1-91f1-069dfe356ec6"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05218118-3032-4c0d-ba29-03e0ef27dd59">
+                    <propertyInstance
+                      Id="c5626209-c8ae-43eb-8cbf-b87e82d621ce"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb292a82-a7c0-4ac1-9fb9-6cb38f01a7fe">
+                    <propertyInstance
+                      Id="6ff12610-120e-4b11-a5cd-bc3fc3080834"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b40ce46-c499-45b5-819e-29256b4fdd1f">
+                    <propertyInstance
+                      Id="2b78dae0-437d-4610-97a8-1ff42d10755b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1f45c54-8678-4401-b81f-05482a40b902">
+                    <propertyInstance
+                      Id="2636824d-9537-49e3-a5ce-1ddb197d0b2d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3018066b-025a-40d3-8480-3f56bcd8bad0">
+                    <propertyInstance
+                      Id="3e5afafe-e89b-47eb-9982-47479c937bb8"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -606,13 +2487,56 @@ On peut traquer les statistiques de l'ensemble d'une partie.</description>
       <class
         Id="70437ee1-249d-4f40-856c-0147573afd1f"
         name="EnsembleCarte"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <description>Classe correspondant à un ensemble de carte.
-Peut être "Main", "Etable", "Pioche", "Deck" ou "Troupeau".
-Implémente les méthodes et propriétés communes permettant l'évolution de l'ensemble au fil du jeu.
+        <description>Classe pour un objet correspondant à un ensemble de carte.
+La main est un ensemble de carte.
+Il existe des classes Troupeau, Pioche et Etable qui héritent de EnsembleCarte.
 </description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2f30a381-8786-4f9a-8e2d-56a1c5426708"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb274032-370a-44ea-aeab-a6f97d85e1b4">
+                <propertyInstance
+                  Id="f865e2fa-6fb3-4f82-b10c-ae809a030109"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9d46ea9b-f571-4d33-ab86-3b39636f92d9">
+                <propertyInstance
+                  Id="6d6af6be-4d98-4b31-a25d-09754465f461"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7ae4ba39-0278-4954-b151-d9196ca2b323">
+                <propertyInstance
+                  Id="2c6f0b75-fdb1-4353-9844-bc1110e5b423"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c9d5a7cc-c688-432c-8ced-7f10a6e9290b">
+                <propertyInstance
+                  Id="47f50f34-37ee-4f76-a65e-836bd7f30e37"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="70894733-5e3b-40fe-b7df-b33b0fb9ff14">
+                <propertyInstance
+                  Id="9bec2aa7-f893-40da-bc9d-6325cbf00fcd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <targetEnds>
           <association
             Id="47ff7233-09ef-48df-b355-1687aad3e49d"
@@ -681,6 +2605,63 @@ Implémente les méthodes et propriétés communes permettant l'évolution de l'
             isComposite="false">
             <description>Collection générique contenant le type Vache.
 La contenance maximale est précisée par la propriété max_cartes.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="80c541a4-9cc4-4998-8c27-255ad3b1ad31"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee9c5501-f84b-4222-8418-f9ef412babf5">
+                    <propertyInstance
+                      Id="8e0481de-408d-47f7-a59f-117f5407e3cd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0a31af4-afc6-4a6d-8ea6-43a897fa36dc">
+                    <propertyInstance
+                      Id="5f44d9d0-4279-43fc-9af6-9239f90a1a77"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="847ab3b7-437b-4d4f-8cc8-144b1641bdeb">
+                    <propertyInstance
+                      Id="37bbcb89-741c-4547-82fa-ebd367fb9758"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cde75cc9-3222-4e08-afaa-f3ff66b7747e">
+                    <propertyInstance
+                      Id="73c9188a-9f83-4195-bb48-a19e96fb6d7d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f99471e-1561-4fb8-92a7-c77fc0421c37">
+                    <propertyInstance
+                      Id="7c45e02c-15ee-45b7-b008-b177494da67b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94aff993-caa2-4801-8e06-a066a921a077">
+                    <propertyInstance
+                      Id="8061808d-134e-4e84-88c7-50e82eeace09"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98fe482b-7ceb-444d-bf8f-e4719b42fe5d">
+                    <propertyInstance
+                      Id="7347348f-12c0-4dd3-b435-e1d76fd8994e"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
                 Id="1b6926f0-e75c-4798-be66-6aabe9e9b087"
@@ -688,132 +2669,8 @@ La contenance maximale est précisée par la propriété max_cartes.</descriptio
                 LastKnownLocation="ClassModel.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="dba2fe00-d351-4c34-a7ea-584dec37418f"
-            name="max_cartes"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <description>Précise le nombre maximum de cartes que la List Cartes peut contenir.</description>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="3a86bf48-ae07-41dd-a811-d00f08eca5f4"
-                name="TextTemplateBindings"
-                profile="TextTemplateBindings">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="49c70eee-63f0-48af-8d85-f6a52f8f107a">
-                    <propertyInstance
-                      Id="5827381a-118b-4204-9892-4fe14c619218"
-                      name="Alias" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8218f7cb-1713-4743-816f-f9a1e43055d2">
-                    <propertyInstance
-                      Id="d8893d00-6cde-4822-b22a-cabebdd1d50f"
-                      name="TemplateFilePath" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="eec02339-d14b-4fca-82c3-c82a68b899c4">
-                    <propertyInstance
-                      Id="e0725151-b32f-4e4e-a787-5c9c7529dcd8"
-                      name="ProjectPath" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="39fa413a-968a-4d71-80cc-6b1d330a11a1">
-                    <propertyInstance
-                      Id="f22f5d02-82da-4ec6-a926-1d2bc71d7844"
-                      name="TargetDirectory" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="75228158-6968-4df3-81f1-a5a98ba2092a">
-                    <propertyInstance
-                      Id="27e17745-2e97-4404-8724-9ef4cf8114fe"
-                      name="TargetName" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="78a54a6e-0692-45e3-b0a7-5e925996a65e">
-                    <propertyInstance
-                      Id="3f582ff2-9cc4-45ec-a918-c6f787662427"
-                      name="Overwrite" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1cac5ced-9683-4fbc-98d2-618f57232530">
-                    <propertyInstance
-                      Id="28800cb1-12f1-49a4-a9ed-df979323412b"
-                      name="Parameters" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
-                LastKnownLocation="ClassModel.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="edd4b215-682f-4a45-8611-abb850be56d3"
-            name="Est_vide"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6d127ac3-4d1b-4bc4-82fa-8e75383ecf85"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="ClassModel.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="fca33717-b91a-44b0-b1f5-6a9c363739d3"
-            name="CompterMouches"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8065ca95-7b2b-452f-b657-10e585bb9fc9"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
-                      LastKnownLocation="ClassModel.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="06685632-ce1f-4e3f-aa4c-ac859e8f9451"
-            name="Vider"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="efac03d3-2e76-4f60-a55c-5943a1dd2da5"
             name="AjouterCarte"
@@ -822,6 +2679,60 @@ La contenance maximale est précisée par la propriété max_cartes.</descriptio
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <description>Ajoute la carte en parametre, à l'ensemble de carte.
+Intervient dans tous les déplacements de carte (avec la méthode RetirerCarte).
+Peut être appelé en boucle pour remplir un ensemble de carte (ex: ajout du troupeau dans l'etable)
+Ou encore en début de manche, lors de la génération de la pioche.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="55cf9c93-bcf5-4d4b-87f5-01a5e035b8dc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="040ff35d-3648-4310-a03b-59202e60508c">
+                    <propertyInstance
+                      Id="93b9fb69-b25e-4f0e-8ba2-04d7cc78cf55"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb900576-83f4-4595-9c58-75bb3d851d23">
+                    <propertyInstance
+                      Id="ede5655f-b73a-4a2e-9202-86cf4aff9a99"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d343fe3e-61f6-4b25-a3bd-011416b62df5">
+                    <propertyInstance
+                      Id="5b177475-a332-4946-a827-881ec9b3c1ec"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d446a313-6f8c-436f-9fb8-62d256178cfa">
+                    <propertyInstance
+                      Id="a414c341-8961-4793-aa2c-aba6576bc9e7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0981a77-b20d-41df-9016-cfcd5ea5cae0">
+                    <propertyInstance
+                      Id="2d5d317a-7a37-4610-b662-b8593b37c8ee"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36ba1213-9c41-40d1-a604-7a751e3c8158">
+                    <propertyInstance
+                      Id="b2a23072-4e3b-429e-a4ab-7b012a491120"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -847,6 +2758,60 @@ La contenance maximale est précisée par la propriété max_cartes.</descriptio
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <description>Retire la carte en parametre de l'ensemble de carte.
+Intervient dans tous les déplacements de carte (avec la méthode AjouterCarte).
+Peut être appelé en boucle pour vider un ensemble de carte (ex: vider le troupeau)
+Ne détruit pas l'objet Vache dans la mémoire, seulement la référence.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5200a7be-44c0-4fca-91bf-b270d364e0b3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d258507-4c2e-475f-b44c-322824b16329">
+                    <propertyInstance
+                      Id="f410029a-34fd-4b68-ada5-a2a812c7108f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7d110fe-f96d-4ff5-a3cb-12007b712a93">
+                    <propertyInstance
+                      Id="b572732c-d896-4461-b5f9-44abb9b2116f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d38e66b4-c8a3-41b8-a12c-dbe3aee027f3">
+                    <propertyInstance
+                      Id="160351bd-7b09-4b34-a360-63cc43ff266d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc05a644-dd78-4cbc-bd58-85b43ba207e8">
+                    <propertyInstance
+                      Id="7e64c31a-5387-4d93-8ba7-71689ae8d3eb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d346fdd-36ba-473e-be8c-30b2dc09caa7">
+                    <propertyInstance
+                      Id="82e5d1f0-638e-4475-ae1f-24faa6a4e2eb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4470450-9486-44df-b6c4-da67c1153340">
+                    <propertyInstance
+                      Id="85d564bb-e6c7-4718-8dd3-ef5d721b03c5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -871,9 +2836,52 @@ La contenance maximale est précisée par la propriété max_cartes.</descriptio
       <class
         Id="1154215d-67fa-4405-9be4-a13fa9e634ec"
         name="Joueur"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ef7a03f5-a56b-4782-a86a-828d88551a8a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4970068c-301d-4f40-bb10-840f54f452d6">
+                <propertyInstance
+                  Id="e761e9b8-0660-419f-9885-2224d4f02339"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3f1b90cc-c5af-427d-807a-266534d244a1">
+                <propertyInstance
+                  Id="dfefda59-4cf9-451d-97eb-2d6f15965387"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2bb85732-4e04-444d-b011-ceb9bfd62e65">
+                <propertyInstance
+                  Id="b91bc7c8-68c4-43e3-bd25-c9c15d232e39"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="48e900e4-c695-4eab-b852-9fd5e9268522">
+                <propertyInstance
+                  Id="f5f84273-1d52-4c7f-98c1-9a16688510ae"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11701ddc-87f2-43c1-b6c3-b0fafc552e14">
+                <propertyInstance
+                  Id="c93ae453-eceb-4835-a0ff-6ab11e50e7ca"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <ownedAttributesInternal>
           <property
             Id="c030889b-92cf-4bdd-9001-f5f73e470f12"
@@ -939,6 +2947,61 @@ Le nombre de mouches contenue indique les points du joueur</description>
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
+              <stereotypeInstance
+                Id="f686c8cd-45c5-4449-a0cb-fd3ddc8fdfcc"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76db2346-ea19-4cd4-9db3-c9a583d0ab88">
+                    <propertyInstance
+                      Id="f1ff9242-6120-43c6-a73d-09e8598f1178"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="acb084dd-f7f2-441f-b2f4-d0a943df16cb">
+                    <propertyInstance
+                      Id="8c52f19b-22e2-41de-86d9-a1595232b8be"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="904fab04-80fc-414c-965d-72bb2da6fa2c">
+                    <propertyInstance
+                      Id="31be7574-800d-4f43-a440-ccbfd3f2db36"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07fd1766-0caa-41a8-88ef-3493c04d7490">
+                    <propertyInstance
+                      Id="c8144a43-ff7f-492c-86a6-b9dfa3b2f059"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b1e8d39-d3a6-4d6c-88e3-fd34ed1c171f">
+                    <propertyInstance
+                      Id="1b642ddd-74ec-4087-8ce0-6342ca685804"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdcbd516-e11a-44bd-9969-00b11d801d1b">
+                    <propertyInstance
+                      Id="7d53c5ee-0b10-40a7-82fd-4b9ac8f9912a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4093a161-93e5-4661-984d-41ac43450a5d">
+                    <propertyInstance
+                      Id="e0dc2f3f-3385-4f73-847e-b65d96c39e7f"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
               <classMoniker
@@ -961,6 +3024,63 @@ Le nombre de mouches contenue indique les points du joueur</description>
             isComposite="false">
             <description>Main du joueur, liste de cartes (type Vache)
 Peut contenir jusqu'à 5 cartes</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="764824bc-e86b-43e3-8f75-26b06853bec0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9f068f0-5a96-4ee9-b36f-201eac422cee">
+                    <propertyInstance
+                      Id="6186e6c2-6c43-4bee-94d4-71d378356333"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5c874ee-0c5d-4229-bdf4-840485f0fde9">
+                    <propertyInstance
+                      Id="668743d9-d0c5-4cb2-9dbc-9d146b4aa234"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f9be0b1-297c-4e15-9b4f-412e88cba9d9">
+                    <propertyInstance
+                      Id="5a2cbc1d-03d0-4b6f-8a8a-ba94d3fdbd52"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cad0754f-aa31-42b7-a819-0d47c096c89d">
+                    <propertyInstance
+                      Id="fa6365e5-feeb-49e6-9c03-f77b9a4887aa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac68d408-dcd7-429f-9521-f9d560313715">
+                    <propertyInstance
+                      Id="a921e37c-1c6a-43bc-af28-704f00e86020"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="489a83b9-68a6-48a7-90ff-27010b658f1f">
+                    <propertyInstance
+                      Id="61e803f2-9a78-4398-935c-08a1b6a8e97f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5062c00-fa77-45c0-a21d-666594e2ee95">
+                    <propertyInstance
+                      Id="162746b9-f61d-4eee-a521-265ab537cf9a"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <classMoniker
                 Id="70437ee1-249d-4f40-856c-0147573afd1f"
@@ -979,6 +3099,66 @@ Peut contenir jusqu'à 5 cartes</description>
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <description>Score total du joueur au cours d'une partie.
+Initialisé à 0.
+On y ajoute le nombre total de mouche dans l'étable à chaque fin de manche.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1864d602-173a-4bc4-84a6-15bbbef5c5b5"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bfe3d98-8f2e-4073-8332-4dfbcffc707e">
+                    <propertyInstance
+                      Id="a2cc5b74-4748-420e-8300-ab66cd4ec552"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b26b5809-10b3-4297-8a16-71b52c706148">
+                    <propertyInstance
+                      Id="5cc13b5f-771f-41ac-b1c3-8ccc544ba015"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="554caa26-ff04-47ad-8af5-d5200a8b5436">
+                    <propertyInstance
+                      Id="d77dac30-3220-4e73-a1d4-00e264236fa5"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67b3d405-adf5-43d8-a0a8-acf30cdd1879">
+                    <propertyInstance
+                      Id="a609421d-4a49-4c13-a837-7d33aafa85ea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45681ebb-82e0-4638-a093-31e4044a5f05">
+                    <propertyInstance
+                      Id="836a7efd-5daf-45f1-b725-b71725ebddf1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2de7ba1-d450-4a55-a948-1e9aae5ba231">
+                    <propertyInstance
+                      Id="64e06ac4-eee0-4a14-83bb-fe46463efa12"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5572034d-a85b-43f3-b46e-a752bce282bf">
+                    <propertyInstance
+                      Id="35b8c122-535a-45f8-a92b-1d3f1a8de7af"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <primitiveTypeMoniker
                 Id="220a3521-e091-4221-bae9-3ef9018e845c"
@@ -997,6 +3177,66 @@ Peut contenir jusqu'à 5 cartes</description>
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <description>Identifiant unique du joueur
+numéro de 0 à 4
+détermine la position sur le plan du jeu</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="68101262-67b2-4545-a7ca-6e03bfb33fe7"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b154ed2-6f25-40b5-b89b-b3d6af4819b8">
+                    <propertyInstance
+                      Id="06804794-429b-46df-bd45-4129b1e42b8d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09e463be-1932-486a-b8a3-d95612912ebd">
+                    <propertyInstance
+                      Id="e9103b88-0731-4619-9964-d874f5991102"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5158649c-2ae8-48b1-85f9-622454edecce">
+                    <propertyInstance
+                      Id="05fd6d86-e7c1-47b4-9750-576f1d2ed766"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b49d99f6-05aa-42d5-8722-d215c9bcbd1a">
+                    <propertyInstance
+                      Id="21caa718-3cbc-46c6-bc02-699754c64517"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f803bbd-1c8c-45e3-bd04-0e4b8079315d">
+                    <propertyInstance
+                      Id="9bcf6011-00ab-4e04-b9b6-921eed2b1057"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb66c7ed-cd79-4f6a-a4b8-72c2ffd860c7">
+                    <propertyInstance
+                      Id="e724048d-a19f-44eb-b797-95f8a56ee548"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da41f78a-5cb2-47d0-a9e1-9a76d5714235">
+                    <propertyInstance
+                      Id="7af0b0f8-72d3-4de8-9855-93294f43434a"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <primitiveTypeMoniker
                 Id="220a3521-e091-4221-bae9-3ef9018e845c"
@@ -1015,6 +3255,65 @@ Peut contenir jusqu'à 5 cartes</description>
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <description>Nom du joueur, entré au début de la partie
+Généré alétoirement pour un joueur IA</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dcc3d3d4-a27c-4726-b73f-42e9cfd327f3"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3f0876c-50c0-4369-830e-8a7a1643cbc1">
+                    <propertyInstance
+                      Id="1873f504-c350-4281-8d06-415aeb9e1a5f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="148dd512-8322-4aa9-91b9-6cbebea4baaf">
+                    <propertyInstance
+                      Id="f76283b7-7c32-4510-a3fc-1888089216a6"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e732e88-777a-465c-b257-c9e7ebbfb53f">
+                    <propertyInstance
+                      Id="ece036e3-7c3a-4d2c-8766-8a5c085292c2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87b34574-e3c3-4eda-980f-ca9943302fe0">
+                    <propertyInstance
+                      Id="2c6e6d9b-b98f-4e26-9028-af697b79884b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c0f7622-77db-45bd-9c69-8a887e2e4437">
+                    <propertyInstance
+                      Id="59fd695b-fa71-4446-b58d-4567640800f3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="654d8d87-c4ab-41c4-b19f-4f15945cbbb4">
+                    <propertyInstance
+                      Id="85b5e848-91a1-4791-9d97-00e9e331ad87"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e26580ab-555e-4591-883d-abc1b6d67839">
+                    <propertyInstance
+                      Id="c307f96e-68a4-4b54-bb85-d16670c0bc2e"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <type_NamedElement>
               <primitiveTypeMoniker
                 Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
@@ -1029,13 +3328,64 @@ Peut contenir jusqu'à 5 cartes</description>
             name="changerSens"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <description>Change l'ordre selon lequel les joueurs enchainent le jeu.
+            <description>Un joueur peut utiliser cette compétence s'il vient de placer une carte spéciale.
+Change l'ordre selon lequel les joueurs enchainent le jeu.
 Horaire: respecte le sens des aiguilles d'une montre.
 Anti-horaire: dans le sens inverse.
 Renvoie le sens après changement effectif.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="61080ea7-0172-4219-b3bb-9ee9189d5690"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e72bb6c3-2208-4d8a-80da-f863884d97f3">
+                    <propertyInstance
+                      Id="c7f278e1-888d-43e9-b79e-1eef96990873"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0158aba5-7353-4d3b-af83-bafc7f0e45e6">
+                    <propertyInstance
+                      Id="74bc15a4-67a2-4ad8-a0a0-48ce562098b1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6627d7b-83b1-49d0-988f-fb2fb5377788">
+                    <propertyInstance
+                      Id="051a2924-c474-4056-bda7-6b60c601ab37"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa80e587-450b-4e5f-a09e-645c6231ba95">
+                    <propertyInstance
+                      Id="c98f1e3b-de74-4f47-9d9d-a209895e5998"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dde6c60a-c0ca-462a-9706-b40471fcf1f6">
+                    <propertyInstance
+                      Id="5ca6d218-b4b2-406d-9e3e-b6687474f109"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c059635c-f41a-458e-813b-065708223120">
+                    <propertyInstance
+                      Id="19551135-318f-4a08-91db-cbfd81034711"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1056,12 +3406,62 @@ Renvoie le sens après changement effectif.</description>
             name="piocher"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <description>Récupère une carte depuis la pioche.
 La carte est supprimée de la pioche et ajoutée à la main du joueur.
 Renvoie la carte piochée.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2c6847c9-47b1-43f7-bb4e-f5d07201d370"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29e68cec-d7d7-4198-98a2-062450803af0">
+                    <propertyInstance
+                      Id="c23acfcf-f623-46b1-95a2-37572603157b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ca8ec8c-6035-4dbd-86cb-71386232daad">
+                    <propertyInstance
+                      Id="ce45fcc6-56b6-4197-aee9-d2c2bd391bff"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f543590-93b2-41d1-b9c2-ae194c6bd318">
+                    <propertyInstance
+                      Id="21b53dcb-be8d-47d2-8f99-3fcfb13bb285"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcbf23c5-2b92-4b47-91d8-b332a3711383">
+                    <propertyInstance
+                      Id="57bd70dc-37bb-4c1f-b67e-029766d7654d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd7b6d64-8321-4e5f-ad0c-bec4a5d6bc5e">
+                    <propertyInstance
+                      Id="60c6c763-0fea-4171-abfa-19a1693976e8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b7cfc75-be78-4af1-993c-6ab37d1f3a9a">
+                    <propertyInstance
+                      Id="7db85f8e-6764-4534-9ef1-6086fddf57ae"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1082,7 +3482,7 @@ Renvoie la carte piochée.</description>
             name="poser"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <description>Dépose une carte depuis la main du joueur dans le troupeau.
@@ -1091,6 +3491,56 @@ Si celle-ci ne renvoie pas false:
 La carte jouée est supprimée de la main du joueur
 Puis elle est ajoutée au troupeau à la position renvoyée par la méthode de placement de carte.
 Renvoie la carte posée.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b420b8e4-d695-4268-a489-827174848ba5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42362094-d965-4c5f-9877-5a2cb7bde7b4">
+                    <propertyInstance
+                      Id="823bab26-e572-44b2-921a-0e0e5a5c64db"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31412636-7d48-44f8-9c41-627598bdf9c5">
+                    <propertyInstance
+                      Id="0fad818d-bb4d-416b-8c4c-063078eacece"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="972a00bb-b92f-4cce-8749-ad247df503d0">
+                    <propertyInstance
+                      Id="40358aaa-86fd-4068-8ab1-6b1f3e50df75"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5b8e846-a62d-4548-a278-d3d53d2e1305">
+                    <propertyInstance
+                      Id="eedbe36a-6850-45d2-91bf-f7e2e397455a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a5fb596-ac40-4374-88b7-24874021f062">
+                    <propertyInstance
+                      Id="57e96850-02a1-4644-92a4-dd1d7607ad9a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4d4fbe2-de53-46ef-9ff5-ccd5cad7967f">
+                    <propertyInstance
+                      Id="3542b312-4736-49a1-bf04-180d32822035"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1111,13 +3561,63 @@ Renvoie la carte posée.</description>
             name="ramasser"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <description>Ramasser les cartes du troupeau.
 Supprime les cartes du troupeau et les ajoute à l'étable du joueur.
 Appelle la fonction de comptage du nombre de mouches.
 Renvoie le nombre de mouches récupérées lors du ramassage.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a14a1cd9-49f5-4d88-9508-0dbbba681870"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3734ac17-d33f-4bdc-a640-ac547050e28e">
+                    <propertyInstance
+                      Id="afd23e01-8fc6-44a0-b038-ebfacfcf95d2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b18a7259-543d-4b05-957e-0f85ba0ed940">
+                    <propertyInstance
+                      Id="83d4a048-3bc2-4d99-890f-cc22e8f290a9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a89d8cfc-c3e6-4e84-ad0f-886ab524e29a">
+                    <propertyInstance
+                      Id="2f931d2f-9bd0-4533-bba5-00fb16ae3efc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09f2bd9e-f603-4e1f-af8e-eeee7c6fd356">
+                    <propertyInstance
+                      Id="60daae1e-bcab-4580-906a-9158f880fbee"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8058eeff-b1ee-4ba0-8188-46a473a969c8">
+                    <propertyInstance
+                      Id="7b01ee49-b60c-46a1-a65a-c905a3dedcb7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="105a0e29-8348-4397-a7b6-4eac6438e97b">
+                    <propertyInstance
+                      Id="3f2f7660-192e-4a62-9598-3710825a3fbb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1144,6 +3644,35 @@ Renvoie le nombre de mouches récupérées lors du ramassage.</description>
         isLeaf="false">
         <description>Liste des actions possibles d'un joueur dans un tour.
 Toutes ne sont pas toujours disponibles.</description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2c7f13ce-ae2e-458b-9c73-f07dfbeefa6b"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d30cb0bd-1990-4f3e-9f9f-87f6d9f25ec7">
+                <propertyInstance
+                  Id="6be1b93a-9ce2-4108-9034-518cc30ffd63"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2a6c10ef-4357-4c89-9e41-f089295443ec">
+                <propertyInstance
+                  Id="c002a33a-99ce-4cf1-9e76-d406cc3867b9"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="de1a6776-18ef-471e-b1da-bf5907b20900">
+                <propertyInstance
+                  Id="f55eb2b1-a5f1-4ca9-bd6d-0f98ccfcdf12"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <ownedLiterals>
           <enumerationLiteral
             Id="0b9b9c10-d0f0-46d3-a146-acf0ee81bff3"
@@ -1230,6 +3759,49 @@ Ne peut contenir qu'une seule carte de chaque numéro.
 Les cartes retardataires peuvent remplacer n'importe quel numéro de 1 à 15 et respectent la même règle.
 Parcontre les cartes acrobates ne peuvent être placées que si leur numéro respectif est déjà présent (7 ou 9).
 </description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c307fa26-16be-4ee7-bd1b-9cee8b37bede"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab565eb4-87c2-46af-a4bc-8f64851a2571">
+                <propertyInstance
+                  Id="c51be98e-0479-42a3-8641-f9c80841d300"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aba73dc8-481b-426c-b1bf-033dd94d599c">
+                <propertyInstance
+                  Id="6aff3d92-9ee4-4475-8c19-e924189c8be3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a71f4399-a63b-4663-b07d-62235107393c">
+                <propertyInstance
+                  Id="e8879c76-d04e-4922-bc72-6f1001c7d9b4"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22dbda00-5075-4269-8ce4-0e8ce7f6be30">
+                <propertyInstance
+                  Id="ea687d7e-8f35-4ea5-bd6c-a34989badb24"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3f523376-8f02-41c7-8689-e53bc1c26311">
+                <propertyInstance
+                  Id="88c898a9-85e6-4026-9632-7f9909445a30"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <generalsInternal>
           <generalization
             Id="824e6a40-b5c7-49c0-a406-9bcf6bc65b4b"
@@ -1253,6 +3825,56 @@ Parcontre les cartes acrobates ne peuvent être placées que si leur numéro res
 Dans la List, les positions de 0 à 16 correspondent aux numéros identiques.
 Les positions 17 et 18 correspondent aux cartes acrobates 7 et 9
 Est utilisé dans les statistiques de jeu comme achievement exceptionnel.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1dd59948-2006-40dc-813e-f898a2f7da33"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66b58ebd-d6e2-4756-bfe2-e7e83ef92143">
+                    <propertyInstance
+                      Id="d35b1cfd-acfb-4456-9bd6-262d8bfce63d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="869019a2-4602-4d40-a0e2-bd9edd32da6d">
+                    <propertyInstance
+                      Id="1f5a6e5e-f57d-493f-8dc4-268b9878cbdb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67f7d493-f9bd-4b7f-ad4b-3dc17d276c3c">
+                    <propertyInstance
+                      Id="ee5cac5a-a9f4-4278-9760-ccd97781130e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4de94d61-ae90-49c2-8ee0-5289b23ff6ca">
+                    <propertyInstance
+                      Id="ca811d7c-a7f2-4d5d-ba24-580fbfcaa842"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69e81ebf-408e-40c7-a4f7-ab4097eb2d91">
+                    <propertyInstance
+                      Id="1a888ffb-7389-4565-96a2-d27461a1a8ef"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab07e19c-cde9-4912-98c2-134a9bf647a5">
+                    <propertyInstance
+                      Id="3a6e5699-45b4-4f6e-ae01-991501b6ac91"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1279,6 +3901,56 @@ Est utilisé dans les statistiques de jeu comme achievement exceptionnel.</descr
             <description>Renseigne l'appeleur de la méthode sur la disponibilité de l'emplacement pour la carte qu'on essaie de jouer.
 S'il s'agit d'une carte acrobate, renvoie vrai si le numéro est Présent dans le troupeau et faux à l'inverse.
 Sinon, renvoie vrai si le numéro est Absent, et faux à l'inverse.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="63e5ad7a-0322-4bae-925c-402368cf7fb1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ab45f22-defc-444d-86db-9778f3e389e0">
+                    <propertyInstance
+                      Id="8040ed3e-39f7-426c-bd25-093c720f404c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cda4cadc-061e-4069-845a-62dbe374bab7">
+                    <propertyInstance
+                      Id="62d7b15f-571d-4f07-b53c-5c4ab2c78670"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f0aed30-1853-421b-89a6-e5365997fc79">
+                    <propertyInstance
+                      Id="b44ebba9-f956-4f37-8fc2-941248af2aef"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f961add-838c-44eb-9bd1-a9e770c2c0da">
+                    <propertyInstance
+                      Id="aa3e5c19-efd4-44bc-b143-b0e7912210e6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f0d86d1-bc07-4163-ae0f-933f4a920e8d">
+                    <propertyInstance
+                      Id="3758f2a9-4b32-4a8f-a18d-12a4b50ba0dc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79bcf1d1-a50f-4149-b262-2a663a195dce">
+                    <propertyInstance
+                      Id="da1df55e-c754-422b-aa7a-5f4a879b7a93"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1323,9 +3995,53 @@ Sinon, renvoie vrai si le numéro est Absent, et faux à l'inverse.</description
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <description>Ensemble des cartes constitué au début de chaque manche.
-Peut être défaussé d'une carte  à la fois.
-Lorsqu'elle est vide, la fin de la manche se prépare.</description>
+        <description>Principal ensemble des cartes, généré et mélangé au début de chaque manche.
+Peut être défaussée d'une carte  à la fois.
+Les condtions de fin de manche nécessitent que la pioche soit vide.
+Lorsque la manche est terminée, toutes les cartes sont supp</description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="58d9e4e1-7558-426e-a739-d176d6fde43f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="98b933ae-114f-4a51-bd14-6f91dcf7b1d5">
+                <propertyInstance
+                  Id="170eceee-605b-4de0-8f59-57ea60465f60"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="34f6ac18-936f-4e93-a7c2-2b38c39378c0">
+                <propertyInstance
+                  Id="6660f94b-cf78-45f1-90bc-b9f62ff47cce"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5d51643f-e4da-40e3-8d2e-c141b9df4e2d">
+                <propertyInstance
+                  Id="31b06a40-96ac-4d0c-b8ba-6c498ad80530"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f9609d3-ff5c-4607-bbbb-d3307e8cce6f">
+                <propertyInstance
+                  Id="8778a6e2-df30-4e9b-a67c-fbeaa92618f2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3e47499a-a46a-40fb-b5db-cd15e8b55186">
+                <propertyInstance
+                  Id="9dfaf16c-312e-4f3a-81fa-f6339129b063"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
         <generalsInternal>
           <generalization
             Id="6dae4942-f587-473e-864e-a605a140842b"
@@ -1336,70 +4052,73 @@ Lorsqu'elle est vide, la fin de la manche se prépare.</description>
               LastKnownLocation="ClassModel.uml" />
           </generalization>
         </generalsInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="406bf295-64a6-44a9-8be6-792f05d6a570"
-        name="Etable"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <description>Chaque joueur dispose de sa propre étable.
-Vide en début de manche, elle peut se remplir de 2 manières.
-A chaque fois que le joueur ramasse les cartes du troupeau.
-En fin de manche lorsque la main est vidée.
-Le nombre de mouches présentes dans l'étable constitue le score du joueur.</description>
-        <generalsInternal>
-          <generalization
-            Id="5b459536-9ec6-41ff-86b5-0a21c5e1f4a7"
-            isSubstitutable="false">
-            <classMoniker
-              Id="70437ee1-249d-4f40-856c-0147573afd1f"
-              LastKnownName="EnsembleCarte"
-              LastKnownLocation="ClassModel.uml" />
-          </generalization>
-        </generalsInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="9002fed8-8cc4-4292-945d-a9e68482431a"
-        name="Main"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <description>Chaque joueur dispose de sa propre main.
-5 Cartes y sont ajoutées au début de manche.
-Elle contient normalement toujours 5 cartes.
-Lorsque le joueur place une de ses cartes, la main n'est plus pleine, et le joueur peut alors piocher (sauf si la pioche est vide).
-A la fin de chaque manche, le contenue de la main de chaque joueur va à son étable respective.</description>
-        <generalsInternal>
-          <generalization
-            Id="0e81bbda-f343-4e81-b579-28a5e7d2a136"
-            isSubstitutable="false">
-            <classMoniker
-              Id="70437ee1-249d-4f40-856c-0147573afd1f"
-              LastKnownName="EnsembleCarte"
-              LastKnownLocation="ClassModel.uml" />
-          </generalization>
-        </generalsInternal>
         <ownedOperationsInternal>
           <operation
-            Id="f78acc81-c25b-4225-bb75-40059e9ed711"
-            name="Est_Pleine"
+            Id="bbdce8b8-e8ca-4f74-b92e-7aa593b45b2b"
+            name="Est_vide"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <description>Indique si la main est plein (cad contient 5 cartes) .</description>
+            <description>Indique que la pioche est vide.
+Condition de fin de manche, lorsqu'un joueur ne peut pas jouer de carte.
+Indique également que les joueurs ne peuvent plus piocher.</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="40961d01-5807-4a3d-b8c7-e05a1741deed"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b61e2be5-412c-4ad6-9948-d8ffa3d7f5bd">
+                    <propertyInstance
+                      Id="5d7e6741-0656-4a6c-bf0d-92f3f78c9297"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab83735b-6ed0-471d-a27e-b89299d973d6">
+                    <propertyInstance
+                      Id="e17b401a-2135-497b-84fa-89bf1e083108"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ea80a36-e7e1-4eb0-87a1-5b042cef36d8">
+                    <propertyInstance
+                      Id="34a31607-b529-4084-b211-e42fe729026e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0da2fd23-3260-499e-a6fc-400c41e3c526">
+                    <propertyInstance
+                      Id="777d38fa-99b0-4a93-b77a-2413178c7fc3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="655f3bd9-b39e-43e6-83e0-9a8baae5f0ae">
+                    <propertyInstance
+                      Id="f71d9177-ee4c-4755-9d5f-e08da3b0a0d3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9343f301-79db-4c56-b0d2-e5ff75b4cd88">
+                    <propertyInstance
+                      Id="9abc4f11-25c6-49a5-a04e-ce16dfcfb802"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c0bc84c7-08fc-4649-9c0f-9e693a2e1a6c"
-                  direction="Return"
-                  isUnique="false">
+                  Id="2546d592-5b96-4b63-a852-7a2e00279d08"
+                  direction="Return">
                   <type_NamedElement>
                     <primitiveTypeMoniker
                       Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
@@ -1415,85 +4134,145 @@ A la fin de chaque manche, le contenue de la main de chaque joueur va à son ét
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="294cc36b-99fd-4345-828a-5e8bbf332d3a"
-        name="Tour"
+        Id="406bf295-64a6-44a9-8be6-792f05d6a570"
+        name="Etable"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <description>Un tour est associé à un seul et unique joueur à la fois.
-Le tour ne finit pas tant que le joueur n'est pas à cours d'action.
-Lorsque le tour est fini, on passe au joueur suivant selon le sens de jeu.
-Horaire : joueur++.
-Anti horaire : joueur--.
-</description>
-        <suppliersInternal>
-          <interfaceRealization
-            Id="910f7c47-7749-4429-abfe-0ecb2f858b41">
-            <interfaceMoniker
-              Id="68b1245b-a7b7-469a-8f5f-4a76cb25a6be"
-              LastKnownName="IGame"
+        <description>Chaque joueur dispose de sa propre étable.
+Vide en début de manche, elle peut se remplir de 2 manières.
+A chaque fois que le joueur ramasse les cartes du troupeau.
+En fin de manche lorsque la main est vidée.
+Le nombre de mouches présentes dans l'étable constitue le score du joueur.</description>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="586a8112-4416-4989-b447-695ed881ec60"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7134967c-1127-4c39-a966-b5813d35002a">
+                <propertyInstance
+                  Id="a842d411-a8b3-4d2c-868e-8cce2e0fc828"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3516b2ac-d637-49e8-a7ff-9addcba86823">
+                <propertyInstance
+                  Id="f7b9f3c1-2e6e-486e-9bbe-fc11fb5767e7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f986acb-dd05-4c6b-b03c-9ea6f4963746">
+                <propertyInstance
+                  Id="3ccab646-9eab-4c22-8a23-2d24d40e257f"
+                  name="IsStatic"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c6e3f01c-5bee-4a84-84be-b51fc4b30dc9">
+                <propertyInstance
+                  Id="fa28f7f5-2823-4d4b-91a2-38155ee6ff0f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="78f9df27-6f41-4f53-b6cc-35d551856213">
+                <propertyInstance
+                  Id="09990640-ed02-4043-b5b8-da23fee30222"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="5b459536-9ec6-41ff-86b5-0a21c5e1f4a7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="70437ee1-249d-4f40-856c-0147573afd1f"
+              LastKnownName="EnsembleCarte"
               LastKnownLocation="ClassModel.uml" />
-          </interfaceRealization>
-          <dependency
-            Id="b82997dd-31ae-4786-8cbe-36087625a1b1">
-            <enumerationMoniker
-              Id="c956e6c0-e31f-43e2-b360-dc9f92a29302"
-              LastKnownName="ESensDeJeu"
-              LastKnownLocation="ClassModel.uml" />
-          </dependency>
-        </suppliersInternal>
-        <ownedAttributesInternal>
-          <property
-            Id="3d9f19f4-d895-448e-b75b-3df69d868723"
-            name="sensDeJeu"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="ee8d3796-a0e1-4897-bb10-8fcbc2c62226"
-            name="joueur"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="1154215d-67fa-4405-9be4-a13fa9e634ec"
-                LastKnownName="Joueur"
-                LastKnownLocation="ClassModel.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
+          </generalization>
+        </generalsInternal>
         <ownedOperationsInternal>
           <operation
-            Id="36978efd-943f-4835-8cbf-479da752da96"
-            name="est_fini"
+            Id="ddfe92d8-6739-4d0b-ab6f-5b1766956f41"
+            name="CompterMouches"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <description>Le tour est fini lorsque le joueur a terminé c'est à dire:
-Si la pioche n'est pas vide, lorsqu'il a pioché.
-Sinon s'il lui reste au moins une carte, lorsqu'il a joué une carte.
-Sinon lorsqu'il a ramassé le troupeau.
-Cas possibles:
-Il ne peut/veut pas jouer et ramasse le troupeau, puis joue, puis pioche.
-Il joue, puis pioche.
-Il ramasse puis joue, puis ne peut pas piocher.
-Il joue, puis ne peut pas piocher.
-Il ramasse, et n'a plus de carte.
-
+            <description>Calcul le nombre total de mouche présent dans cette List de vache.
+Pour chaque Vache présente dans la liste, additionne la propriété nb_mouche.
 </description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9135d406-cc50-4fa8-b339-cf9aaa57a4f5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce8e46bf-7ab6-44fb-a467-b9e5c3f9f5de">
+                    <propertyInstance
+                      Id="9a027897-81f9-4df6-b217-54e2a172b148"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3926edb7-396d-4ba7-994a-9556d4b284d6">
+                    <propertyInstance
+                      Id="e35c9c99-e664-41b6-a0cb-831a174fbb86"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1a88521-13f2-43de-befc-a509aae09797">
+                    <propertyInstance
+                      Id="463f2de1-1333-4881-a4f6-7f74f16a8a00"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ef67c27-602d-44a7-a43c-f314da7e1cf1">
+                    <propertyInstance
+                      Id="665300b4-8fb7-4585-a913-ed1a548338cf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01024a31-acde-4d3f-b61b-73fb33f4eb24">
+                    <propertyInstance
+                      Id="62807057-cc5c-4358-9c98-b9dce03b8650"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c2cf350-3fd7-4e91-9372-1ca9648a7bed">
+                    <propertyInstance
+                      Id="5bb7abf2-6c95-4f43-8d1b-ce8be70d7e33"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="68ed2a4d-3815-43ed-81c0-c7b83364deea"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ClassModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>

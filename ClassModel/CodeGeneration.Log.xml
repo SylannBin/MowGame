@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Diagnostic" Text="ProjectPath = ..\ClassModelLib\ClassModelLib.csproj" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:29" Importance="Medium" Text="ClassModel's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'ClassModel::Vache' -  (Class), 'ClassModel::EnsembleCarte' -  (Class), 'ClassModel::Joueur' -  (Class), 'ClassModel::Statistique' -  (Class), 'ClassModel::Troupeau' -  (Class), 'ClassModel::Humain' -  (Class), 'ClassModel::AI' -  (Class), 'ClassModel::Etable' -  (Class), 'ClassModel::Pioche' -  (Class), 'ClassModel::Manche' -  (Class), 'ClassModel::Partie' -  (Class) " />
+  <Message Timestamp="2016-11-22T23:47:55" Importance="Medium" Text="'ClassModel::Vache' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Vache.cs" />
+  <Message Timestamp="2016-11-22T23:47:55" Importance="Medium" Text="'ClassModel::EnsembleCarte' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\EnsembleCarte.cs" />
+  <Message Timestamp="2016-11-22T23:47:55" Importance="Medium" Text="'ClassModel::Joueur' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Joueur.cs" />
+  <Message Timestamp="2016-11-22T23:47:55" Importance="Medium" Text="'ClassModel::Statistique' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Statistique.cs" />
+  <Message Timestamp="2016-11-22T23:47:56" Importance="Medium" Text="'ClassModel::Troupeau' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Troupeau.cs" />
+  <Message Timestamp="2016-11-22T23:47:56" Importance="Medium" Text="'ClassModel::Humain' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Humain.cs" />
+  <Message Timestamp="2016-11-22T23:47:56" Importance="Medium" Text="'ClassModel::AI' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\AI.cs" />
+  <Message Timestamp="2016-11-22T23:47:56" Importance="Medium" Text="'ClassModel::Etable' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Etable.cs" />
+  <Message Timestamp="2016-11-22T23:47:56" Importance="Medium" Text="'ClassModel::Pioche' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Pioche.cs" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Medium" Text="'ClassModel::Manche' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Manche.cs" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Medium" Text="'ClassModel::Partie' -  (Class) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\Partie.cs" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="Name = EnumTemplate" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="ProjectPath = ..\ClassModelLib\ClassModelLib.csproj" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Medium" Text="ClassModel's Text Template Binding: 'EnumTemplate' will apply EnumTemplate.t4 to: 'ClassModel::ECategorieVache' -  (Enumeration), 'ClassModel::ESensDeJeu' -  (Enumeration), 'ClassModel::EAction' -  (Enumeration) " />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Medium" Text="'ClassModel::ECategorieVache' -  (Enumeration) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\ECategorieVache.cs" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Medium" Text="'ClassModel::ESensDeJeu' -  (Enumeration) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\ESensDeJeu.cs" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Medium" Text="'ClassModel::EAction' -  (Enumeration) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\EAction.cs" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="Name = InterfaceTemplate" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="ProjectPath = ..\ClassModelLib\ClassModelLib.csproj" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:57" Importance="Medium" Text="ClassModel's Text Template Binding: 'InterfaceTemplate' will apply InterfaceTemplate.t4 to: 'ClassModel::IGame' -  (Interface) " />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Medium" Text="'ClassModel::IGame' -  (Interface) : success (file replaced) - C:\Users\rfvin\Documents\Dev\C#\mowGame\ClassModelLib\GeneratedCode\IGame.cs" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="ProjectPath = ..\ClassModelLib\ClassModelLib.csproj" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Medium" Text="ClassModel's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'ClassModel::Vache' -  (Class), 'ClassModel::EnsembleCarte' -  (Class), 'ClassModel::Joueur' -  (Class), 'ClassModel::Statistique' -  (Class), 'ClassModel::Troupeau' -  (Class), 'ClassModel::Humain' -  (Class), 'ClassModel::AI' -  (Class), 'ClassModel::Etable' -  (Class), 'ClassModel::Pioche' -  (Class), 'ClassModel::Manche' -  (Class), 'ClassModel::Partie' -  (Class) " />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::Vache' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::EnsembleCarte' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::Joueur' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::Statistique' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::Troupeau' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::Humain' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::AI' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::Etable' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:58" Importance="Diagnostic" Text="'ClassModel::Pioche' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::Manche' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::Partie' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="The selection included 13 elements which were not bound to a template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::' -  (Association): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::' -  (Dependency): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'824e6a40-b5c7-49c0-a406-9bcf6bc65b4b' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'a7187f0f-f358-49dc-b667-618d5764ab64' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'32fc1834-a8bb-4604-88d2-d0d698fb8df0' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'5b459536-9ec6-41ff-86b5-0a21c5e1f4a7' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::' -  (Dependency): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::' -  (Dependency): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'6dae4942-f587-473e-864e-a605a140842b' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'08796d42-0088-4c4f-9964-1c7fe0b7f7bf' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'68c6a3ce-4568-4510-88d9-91563b8340e2' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="Diagnostic" Text="'ClassModel::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2016-11-22T23:47:59" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>

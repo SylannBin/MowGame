@@ -5,8 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mowProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="760" Width="1024">
+    <Window.Resources>
+        <Style x:Key="RectangleStyle1" TargetType="{x:Type Rectangle}"/>
+    </Window.Resources>
+    <Grid Margin="0,0,2,0" Height="323" VerticalAlignment="Top">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="89" Margin="730,631,0,-397" Stroke="Black" VerticalAlignment="Top" Width="112"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="37" Margin="730,589,0,-303" TextWrapping="Wrap" Text="Étable" VerticalAlignment="Top" Width="112" FontSize="20"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="131" Margin="864,606,0,-414" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="20"><Run Text="Nom du joueur"/><LineBreak/><Run Text="Point étable :"/><LineBreak/><Run Text="Point total :"/><LineBreak/><Run Text="Manche joué :"/></TextBlock>
+        <Button x:Name="Button1" Content="Ramasser" HorizontalAlignment="Left" Height="37" Margin="13,591,0,-305" VerticalAlignment="Top" Width="168" Click="button_Click"/>
+        <Button x:Name="button" Content="Jouer une carte" HorizontalAlignment="Left" Height="37" Margin="13,631,0,-347" VerticalAlignment="Top" Width="168" Click="button_Click_1"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="108" Margin="69,38,0,0" Stroke="Black" VerticalAlignment="Top" Width="112"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="108" Margin="186,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="20"><Run Text="Joueur 3"/><LineBreak/><Run Text="Point étable :"/><LineBreak/><Run Text="Point total "/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Height="108" Margin="699,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" FontSize="20"><Run Text="Joueur "/><Run Text="4"/><LineBreak/><Run Text="Point étable :"/><LineBreak/><Run Text="Point total "/><Run Text=":"/></TextBlock>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="108" Margin="582,38,0,0" Stroke="Black" VerticalAlignment="Top" Width="112"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="108" Margin="13,344,0,-129" Stroke="Black" VerticalAlignment="Top" Width="112"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="577,344,0,-129" Stroke="Black" Width="112"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="33" Margin="389,551,0,-261" TextWrapping="Wrap" Text="Pseudo du joueur" VerticalAlignment="Top" Width="173" FontSize="20"/>
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Height="108" Margin="694,344,0,-129" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="20"><Run Text="Joueur "/><Run Text="5"/><LineBreak/><Run Text="Point étable :"/><LineBreak/><Run Text="Point total "/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Height="108" Margin="420,413,0,-198" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="20"><Run Text="Joueur "/><Run Text="1"/><LineBreak/><Run Text="Point étable :"/><LineBreak/><Run Text="Point total "/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Height="108" Margin="130,344,0,-129" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="20"><Run Text="Joueur "/><Run Text="3"/><LineBreak/><Run Text="Point étable :"/><LineBreak/><Run Text="Point total "/><Run Text=":"/></TextBlock>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="108" Margin="113,191,0,0" Stroke="Black" VerticalAlignment="Top" Width="532"/>
+        <Button x:Name="button1" Content="Terminer le tour" HorizontalAlignment="Left" Height="39" Margin="13,672,0,-388" VerticalAlignment="Top" Width="168"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="477" Margin="823,107,0,-261" Stroke="Black" VerticalAlignment="Top" Width="181"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="29" Margin="829,134,0,0" TextWrapping="Wrap" Text="Boite de message" VerticalAlignment="Top" Width="168" FontSize="20"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="108" Margin="661,191,0,0" Stroke="Black" VerticalAlignment="Top" Width="62"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="36" Margin="655,150,0,0" TextWrapping="Wrap" Text="Pioche" VerticalAlignment="Top" Width="73"  FontSize="20"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="58" Margin="823,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="181"/>
+        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="33" Margin="842,38,0,0" TextWrapping="Wrap" Text="Sens du jeu" VerticalAlignment="Top" Width="155" FontSize="20"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <Grid Margin="304,413,610,-190">
+            <Border HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="-62,-74,0,0">
+                <Image x:Name="Place1" Margin="-122,-143,122,143"/>
+
+
+            </Border>
+
+
+        </Grid>
+        <Image x:Name="main1" HorizontalAlignment="Left" Height="100" Margin="207,606,0,-383" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.39,0.34"/>
+        <Image x:Name="main2" HorizontalAlignment="Left" Height="100" Margin="304,606,0,-383" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="main3" HorizontalAlignment="Left" Height="100" Margin="412,606,0,-383" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="main4" HorizontalAlignment="Left" Height="100" Margin="517,611,0,-388" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="main5" HorizontalAlignment="Left" Height="100" Margin="617,611,0,-388" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="Place3" HorizontalAlignment="Left" Height="100" Margin="343,195,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="Place2" HorizontalAlignment="Left" Height="100" Margin="229,195,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="Place4" HorizontalAlignment="Left" Height="100" Margin="450,196,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="Place5" HorizontalAlignment="Left" Height="100" Margin="557,195,0,0" VerticalAlignment="Top" Width="100"/>
+
+
+
     </Grid>
 </Window>

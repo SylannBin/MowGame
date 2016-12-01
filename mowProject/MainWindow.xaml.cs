@@ -24,6 +24,28 @@ namespace mowProject
         public MainWindow()
         {
             InitializeComponent();
+
+
+            /*
+            class toto
+            {
+                string joueurName = "jean";
+                int age = 10;
+            }
+
+
+            DataContext = maClass();
+            InitializeComponent();
+
+            // xaml
+            <textbox text = { Binding path = JoueurName}
+            
+            */
+
+
+            //DataContext = maClass();
+
+
             var uriSource = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_4.png");
             main1.Source = new BitmapImage(uriSource);
             var uriSource2 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png");

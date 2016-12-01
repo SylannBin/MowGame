@@ -16,4 +16,6 @@ public class Humain : Joueur
 		throw new System.NotImplementedException();
 	}
 
+
+
 }

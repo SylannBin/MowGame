@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace mowProject
+namespace MowGame.Main
 {
     /// <summary>
     /// Interaction logic for App.xaml

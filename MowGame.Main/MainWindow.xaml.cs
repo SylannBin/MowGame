@@ -13,8 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
+using System.IO.Packaging;
 
-namespace mowProject
+namespace MowGame.Main
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,14 +26,12 @@ namespace mowProject
         {
             InitializeComponent();
 
-
             /*
             class toto
             {
                 string joueurName = "jean";
                 int age = 10;
             }
-
 
             DataContext = maClass();
             InitializeComponent();
@@ -42,29 +41,59 @@ namespace mowProject
             
             */
 
-
             //DataContext = maClass();
 
 
+            // Déclaration path Cartes spéciales
+            var srcSensDuJeu = new Uri(@"/Images/sensDuJeu.jpg", UriKind.Relative);
+
+            var srcRetardataire = new Uri(@"/Images/retardataire.jpg", UriKind.Relative);
+
+            var srcSerreFile0 = new Uri(@"/Images/serreFile0.jpg",UriKind.Relative);
+            var srcSerreFile16 = new Uri(@"/Images/serreFile16.jpg", UriKind.Relative);
+            var srcAcrobate7 = new Uri(@"/Images/acrobate7.jpg", UriKind.Relative);
+            var srcAcrobate9 = new Uri(@"/Images/acrobate9.jpg", UriKind.Relative);
+
+
+            // Initialisation
+            Place0.Source = new BitmapImage(srcSerreFile0);
+            Place16.Source = new BitmapImage(srcSerreFile16);
+
+            Place7B.Source = new BitmapImage(srcAcrobate7);
+            Place9B.Source = new BitmapImage(srcAcrobate9);
+
+            SensDuJeu.Source = new BitmapImage(srcSensDuJeu);
+
+
+            
+
+
+
             var uriSource = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_4.png");
-            main1.Source = new BitmapImage(uriSource);
+            JoueurCourantCarte1.Source = new BitmapImage(uriSource);
+
             var uriSource2 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png");
-            main2.Source = new BitmapImage(uriSource2);
+            JoueurCourantCarte2.Source = new BitmapImage(uriSource2);
+
             var uriSource3 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_3.png");
-            main3.Source = new BitmapImage(uriSource3);
+            JoueurCourantCarte3.Source = new BitmapImage(uriSource3);
+
             var uriSource4 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_13.png");
-            main4.Source = new BitmapImage(uriSource4);
+            JoueurCourantCarte4.Source = new BitmapImage(uriSource4);
+
             var uriSource5 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_5.png");
-            main5.Source = new BitmapImage(uriSource5);
+            JoueurCourantCarte5.Source = new BitmapImage(uriSource5);
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void BtnRamasserClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hi team !");
+            MessageBox.Show("Je ramasse le troupeau !");
         }
 
-        private void button_Click_1(object sender, RoutedEventArgs e)
+        private void BtnJouerCarteClick(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Je Joue une carte");
+
             if (Place3.Source == null)
             {
                 var uriSource = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png");
@@ -79,5 +108,10 @@ namespace mowProject
 
         }
 
+
+        private void BtnPiocherCarteClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Je Pioche");
+        }
     } // Fin class MainWindow : Window
 } // Fin namespace mowProject

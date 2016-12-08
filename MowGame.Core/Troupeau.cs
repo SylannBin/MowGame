@@ -30,7 +30,7 @@ namespace MowProject.core
         /// S'il s'agit d'une carte acrobate, renvoie vrai si le numéro est Présent dans le troupeau et faux à l'inverse.
         /// Sinon, renvoie vrai si le numéro est Absent, et faux à l'inverse.
         /// </summary>
-        public virtual bool Est_Libre(int numero)
+        public virtual bool Est_Libre(int Valeur)
         {
             throw new System.NotImplementedException();
         }

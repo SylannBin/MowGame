@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Security.Cryptography;
 
 namespace MowProject.core
 {
@@ -13,22 +14,106 @@ namespace MowProject.core
     public class EnsembleCarte
     {
 	    /// <summary>
-	    /// Collection générique contenant le type Vache.
-	    /// La contenance maximale est précisée par la propriété max_cartes.
+	    /// Liste des cartes de EnsemleCarte.
 	    /// </summary>
-	    public virtual List<Vache> Cartes
-	    {
-		    get;
-		    set;
-	    }
+	    public virtual List<Vache> Cartes { get; set; }
 
-	    /// <summary>
-	    /// Ajoute la carte en parametre, à l'ensemble de carte.
-	    /// Intervient dans tous les déplacements de carte (avec la méthode RetirerCarte).
-	    /// Peut être appelé en boucle pour remplir un ensemble de carte (ex: ajout du troupeau dans l'etable)
-	    /// Ou encore en début de manche, lors de la génération de la pioche.
-	    /// </summary>
-	    public virtual void AjouterCarte(Vache carte)
+        /// <summary>
+        /// Creation des :
+        /// - 15 cartes vaches (numérotées de 1 à 15), avec 0 mouche
+        /// - 13 cartes vaches (numérotées de 2 à 14), avec 1 mouche
+        /// - 11 cartes vaches (numérotées de 3 à 13), avec 2 mouches
+        /// - 3 cartes vaches (numérotées 7, 8, 9), avec 3 mouches
+        /// Creation des 6 cartes vaches spéciales, avec 5 mouches :
+        /// - 2 serre-files
+        /// - 2 vaches acrobates
+        /// - 2 vaches retardataires
+        /// </summary>
+        public List<Vache> creerdeck()
+        {
+            List<Vache> deck = new List<Vache>();
+
+            for (int i = 1; i < 16; i++)
+            {
+                deck.Add(new Vache() {
+                    Valeur = i,
+                    nb_mouches = 0,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            for (int i = 2; i < 15; i++)
+            {
+                deck.Add(new Vache() {
+                    Valeur = i,
+                    nb_mouches = 1,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            for (int i = 3; i < 14; i++)
+            {
+                deck.Add(new Vache() {
+                    Valeur = i,
+                    nb_mouches = 2,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            for (int i = 7; i < 10; i++)
+            {
+                deck.Add(new Vache() {
+                    Valeur = i,
+                    nb_mouches = 3,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 16, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
+
+            deck.Add(new Vache() { Valeur = 7, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 9, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
+
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
+
+            return deck;
+        }
+
+        /// <summary>
+        /// Methode Shuffle : mélange une liste aléatoirement
+        /// </summary>
+        /// <typeparam name="T">Objet de type "Vache" avec trois propriétés ( Valeur - nb_mouches - Categorie )</typeparam>
+        /// <param name="list">Liste (deck, pioche, paquet ...) à mélanger</param>
+        public void Shuffle<T>(IList<T> list)
+        {
+            RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
+            int n = list.Count;
+            while (n > 1)
+            {
+                byte[] box = new byte[1];
+                do provider.GetBytes(box);
+                while (!(box[0] < n * (Byte.MaxValue / n)));
+                int k = (box[0] % n);
+                n--;
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+        }
+
+        /// <summary>
+        /// Ajoute la carte en parametre, à l'ensemble de carte.
+        /// Intervient dans tous les déplacements de carte (avec la méthode RetirerCarte).
+        /// Peut être appelé en boucle pour remplir un ensemble de carte (ex: ajout du troupeau dans l'etable)
+        /// Ou encore en début de manche, lors de la génération de la pioche.
+        /// </summary>
+        public virtual void AjouterCarte(Vache carte)
 	    {
 		    throw new System.NotImplementedException();
 	    }

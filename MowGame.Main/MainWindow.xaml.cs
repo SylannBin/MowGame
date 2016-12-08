@@ -57,19 +57,19 @@ namespace MowGame.Main
 
 
 
-            var uriSource = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_4.png");
+            var uriSource = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_4.png"));
             JoueurCourantCarte1.Source = new BitmapImage(uriSource);
 
-            var uriSource2 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png");
+            var uriSource2 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_9.png"));
             JoueurCourantCarte2.Source = new BitmapImage(uriSource2);
 
-            var uriSource3 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_3.png");
+            var uriSource3 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_3.png"));
             JoueurCourantCarte3.Source = new BitmapImage(uriSource3);
 
-            var uriSource4 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_13.png");
+            var uriSource4 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_13.png"));
             JoueurCourantCarte4.Source = new BitmapImage(uriSource4);
 
-            var uriSource5 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_5.png");
+            var uriSource5 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_5.png"));
             JoueurCourantCarte5.Source = new BitmapImage(uriSource5);
         }
 

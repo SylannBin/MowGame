@@ -22,29 +22,15 @@ namespace MowGame.Main
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool evenement = false;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            /*
-            class toto
-            {
-                string joueurName = "jean";
-                int age = 10;
-            }
-
-            DataContext = maClass();
-            InitializeComponent();
-
-            // xaml
-            <textbox text = { Binding path = JoueurName}
-            
-            */
-
-            //DataContext = maClass();
-
-
             // Déclaration path Cartes spéciales
+            var srcBackGr = new Uri(@"/Images/GameBackGround.png", UriKind.Relative);
+
             var srcSensDuJeu = new Uri(@"/Images/sensDuJeu.jpg", UriKind.Relative);
 
             var srcRetardataire = new Uri(@"/Images/retardataire.jpg", UriKind.Relative);
@@ -56,6 +42,8 @@ namespace MowGame.Main
 
 
             // Initialisation
+            //Game.Background = new BitmapImage(srcBackGr);
+
             Place0.Source = new BitmapImage(srcSerreFile0);
             Place16.Source = new BitmapImage(srcSerreFile16);
 
@@ -87,23 +75,43 @@ namespace MowGame.Main
 
         private void BtnRamasserClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Je ramasse le troupeau !");
+            Place1.Source = null;
+            Place2.Source = null;
+            Place3.Source = null;
+            Place4.Source = null;
+            Place5.Source = null;
+            MessageBox.Show("Vous avez rammassé le troupeau !");
         }
 
-        private void BtnJouerCarteClick(object sender, RoutedEventArgs e)
+        public void BtnJouerCarteClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Je Joue une carte");
+            evenement = true;
+            MessageBox.Show("Vous pouvez jouer une carte !");
 
-            if (Place3.Source == null)
-            {
-                var uriSource = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png");
-                Place3.Source = new BitmapImage(uriSource);
+        }
+        /*Image monImage = (Image)sender;
+            string chemin = (string)monImage.DataContext;
+            MessageBox.Show(chemin);
+            */
 
-            }
-            else
+
+        public void BtnPoserCarte(object sender, MouseButtonEventArgs e)
+        {
+            if (evenement)
             {
-                var uriSource2 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_4.png");
-                Place1.Source = new BitmapImage(uriSource2);
+                if (Place3.Source == null)
+                {
+                    var uriSource = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png");
+                    Place3.Source = new BitmapImage(uriSource);
+                    Place3.DataContext = @"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png";
+                }
+                else
+                {
+                    var uriSource2 = new Uri(@"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_4.png");
+                    Place1.Source = new BitmapImage(uriSource2);
+                    Place1.DataContext = @"C:\Users\Admin\Desktop\EPSI\C#\mow\Vaches\Vache_9.png";
+                }
+                evenement = false;
             }
 
         }
@@ -113,5 +121,6 @@ namespace MowGame.Main
         {
             MessageBox.Show("Je Pioche");
         }
+
     } // Fin class MainWindow : Window
 } // Fin namespace mowProject

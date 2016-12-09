@@ -136,6 +136,9 @@
     <Content Include="Images\GameBackGround.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\up.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\refresh.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

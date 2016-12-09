@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
 using System.IO.Packaging;
+using MowGame.Core;
 
 namespace MowGame.Main
 {
@@ -53,24 +54,36 @@ namespace MowGame.Main
             SensDuJeu.Source = new BitmapImage(srcSensDuJeu);
 
 
-            
 
+            // Test temporaire
+            EnsembleCarte test = new EnsembleCarte();
+            label.Content = test.GetRnd(10, 20);
 
-
-            var uriSource = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_4.png"));
+            // Définition des images de la main
+            var uriSource = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, @"Images/standard4_1.jpg"));
             JoueurCourantCarte1.Source = new BitmapImage(uriSource);
 
-            var uriSource2 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_9.png"));
+            var uriSource2 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, @"Images/acrobate9.jpg"));
             JoueurCourantCarte2.Source = new BitmapImage(uriSource2);
 
-            var uriSource3 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_3.png"));
+            var uriSource3 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, @"Images/default.jpg"));
             JoueurCourantCarte3.Source = new BitmapImage(uriSource3);
 
-            var uriSource4 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_13.png"));
+            var uriSource4 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, @"Images/default.jpg"));
             JoueurCourantCarte4.Source = new BitmapImage(uriSource4);
 
-            var uriSource5 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "Vache_5.png"));
+            var uriSource5 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, @"Images/default.jpg"));
             JoueurCourantCarte5.Source = new BitmapImage(uriSource5);
+
+            var uriSource6 = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images/refresh.jpg"));
+            imagerefresh.Source = new BitmapImage(uriSource6);
+        }
+
+        //test random number
+        private void image_click(object sender, RoutedEventArgs e)
+        {
+            EnsembleCarte test = new EnsembleCarte();
+            label.Content = test.GetRnd(10, 20);
         }
 
         private void BtnRamasserClick(object sender, RoutedEventArgs e)
@@ -80,6 +93,7 @@ namespace MowGame.Main
             Place3.Source = null;
             Place4.Source = null;
             Place5.Source = null;
+            Place6.Source = null;
             MessageBox.Show("Vous avez rammassé le troupeau !");
         }
 

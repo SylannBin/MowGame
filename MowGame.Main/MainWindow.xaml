@@ -130,6 +130,19 @@
                 <Image x:Name="Place15" Grid.Row="1" Grid.Column="15" Height="60" Width="35"/>
                 <Image x:Name="Place16" Grid.Row="1" Grid.Column="16" Height="60" Width="35"/>
             </Grid>
+            <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="804,439,0,0" VerticalAlignment="Top"/>
+            <Image x:Name="imagerefresh" HorizontalAlignment="Left" Height="33" Margin="414,508,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Cursor="Hand" MouseUp="image_click">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-45.0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+
 
         </Grid>
 
@@ -201,7 +214,7 @@
                   Grid.Column="1"
                   Grid.Row="0" Grid.RowSpan="3"
                   Margin="10">
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -217,7 +230,7 @@
                 <Image x:Name="JoueurCourantCarte5" Grid.Column="4" Height="110" Width="60"/>
 
             </Grid>
-            
+
             <!--Troisieme colonne-->
             <TextBox x:Name="GameLogTitle"
                      Text="Boite de message"

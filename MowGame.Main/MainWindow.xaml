@@ -15,7 +15,7 @@
             <RowDefinition Height="160"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,10,-10,150" Grid.RowSpan="2">
 
             <TextBlock x:Name="InfoDuJoueur1"
                        Text="Main du Joueur 1 Cartes retournées Score : x mouches Etable : y vaches *En train de jouer"
@@ -125,19 +125,16 @@
                 <Image x:Name="Place10" Grid.Row="1" Grid.Column="10" Height="60" Width="35"/>
                 <Image x:Name="Place11" Grid.Row="1" Grid.Column="11" Height="60" Width="35"/>
                 <Image x:Name="Place12" Grid.Row="1" Grid.Column="12" Height="60" Width="35"/>
-                <Image x:Name="Place13" Grid.Row="1" Grid.Column="13" Height="60" Width="35"/>
+                <Image x:Name="Place13" Grid.Row="1" Grid.Column="13" Height="60" Width="35" Panel.ZIndex="-4"/>
                 <Image x:Name="Place14" Grid.Row="1" Grid.Column="14" Height="60" Width="35"/>
                 <Image x:Name="Place15" Grid.Row="1" Grid.Column="15" Height="60" Width="35"/>
                 <Image x:Name="Place16" Grid.Row="1" Grid.Column="16" Height="60" Width="35"/>
             </Grid>
             <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="804,439,0,0" VerticalAlignment="Top"/>
-            <Image x:Name="imagerefresh" HorizontalAlignment="Left" Height="33" Margin="414,508,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Cursor="Hand" MouseUp="image_click">
+            <Image x:Name="imagerefresh" Height="33" Width="33" RenderTransformOrigin="0.5,0.5" Cursor="Hand" MouseUp="image_click_up" MouseDown="image_click_down" MouseEnter="image_enter" MouseLeave="image_leave" Margin="405,478,578,66" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-45.0"/>
-                        <TranslateTransform/>
+                        <RotateTransform Angle="-45"/>
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>

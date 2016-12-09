@@ -75,15 +75,37 @@ namespace MowGame.Main
             var uriSource5 = new Uri(System.IO.Path.Combine( AppDomain.CurrentDomain.BaseDirectory, @"Images/default.jpg"));
             JoueurCourantCarte5.Source = new BitmapImage(uriSource5);
 
-            var uriSource6 = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images/refresh.jpg"));
+            var uriSource6 = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images/up.jpg"));
             imagerefresh.Source = new BitmapImage(uriSource6);
         }
 
         //test random number
-        private void image_click(object sender, RoutedEventArgs e)
+        private void image_click_up(object sender, RoutedEventArgs e)
         {
             EnsembleCarte test = new EnsembleCarte();
             label.Content = test.GetRnd(10, 20);
+            var uriSource6 = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images/up.jpg"));
+            imagerefresh.Source = new BitmapImage(uriSource6);
+        }
+
+        private void image_click_down(object sender, RoutedEventArgs e)
+        {
+            var uriSource6 = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Images/refresh.jpg"));
+            imagerefresh.Source = new BitmapImage(uriSource6);
+        }
+
+        private void image_enter(object sender, MouseEventArgs e)
+        {
+            Image img = ((Image)sender);
+            img.Height = 66;
+            img.Width = 66;
+        }
+        
+        private void image_leave(object sender, MouseEventArgs e)
+        {
+            Image img = ((Image)sender);
+            img.Height = 33;
+            img.Width = 33;
         }
 
         private void BtnRamasserClick(object sender, RoutedEventArgs e)

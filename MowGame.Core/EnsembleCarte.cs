@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace MowProject.core
+namespace MowGame.Core
 {
     /// <summary>
     /// Classe pour un objet correspondant à un ensemble de carte.
@@ -28,6 +28,7 @@ namespace MowProject.core
         /// - 2 serre-files
         /// - 2 vaches acrobates
         /// - 2 vaches retardataires
+        /// Return la liste des 46 Vaches
         /// </summary>
         public List<Vache> creerdeck()
         {
@@ -106,6 +107,32 @@ namespace MowProject.core
                 list[n] = value;
             }
         }
+
+        /// <summary>
+        /// Create a random number in a range
+        /// </summary>
+        /// <param name="min">Minimal value</param>
+        /// <param name="max">Maximal value</param>
+        /// <returns></returns>
+        public RNGCryptoServiceProvider _RNG = new RNGCryptoServiceProvider();
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <returns></returns>
+        public int GetRnd(int min, int max)
+        {
+            byte[] rndBytes = new byte[4];
+            _RNG.GetBytes(rndBytes);
+            int rand = BitConverter.ToInt32(rndBytes, 0);
+            const Decimal OldRange = (Decimal)int.MaxValue - (Decimal)int.MinValue;
+            Decimal NewRange = max - min;
+            Decimal NewValue = ((Decimal)rand - (Decimal)int.MinValue) / OldRange * NewRange + (Decimal)min;
+            return (int)NewValue;
+        }
+
 
         /// <summary>
         /// Ajoute la carte en parametre, à l'ensemble de carte.

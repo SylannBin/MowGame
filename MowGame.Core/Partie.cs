@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MowProject.core
+namespace MowGame.Core
 {
     /// <summary>
     /// Le jeu se termine lorsqu'un joueur atteint les 100 points.

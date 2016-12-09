@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MowProject.core
+namespace MowGame.Core
 {
     /// <summary>
     /// Une manche se termine lorsque la pioche et le troupeau sont vides.

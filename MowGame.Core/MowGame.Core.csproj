@@ -7,8 +7,8 @@
     <ProjectGuid>{3FA8E068-0F0F-44B1-9B05-7D954336FDA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BibliothequeDeClasses</RootNamespace>
-    <AssemblyName>BibliothequeDeClasses</AssemblyName>
+    <RootNamespace>MowGame.Core</RootNamespace>
+    <AssemblyName>MowGame.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

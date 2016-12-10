@@ -133,9 +133,9 @@
     <Content Include="Images\default.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\GameBackGround.png">
+    <Resource Include="Images\GameBackGround.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </Resource>
     <Resource Include="Images\up.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

@@ -6,9 +6,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="768" Width="1024">
     <Window.Background>
-        <ImageBrush ImageSource="/Images/GameBackGround.png" />
+        <ImageBrush ImageSource="Images/GameBackGround.png" />
     </Window.Background>
-    <Grid x:Name="MainGrid">
+            <Grid x:Name="MainGrid">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

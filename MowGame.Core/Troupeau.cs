@@ -27,6 +27,7 @@ namespace MowGame.Core
             {
                 return true;
             }
+            return false;
         }
 
         /// <summary>

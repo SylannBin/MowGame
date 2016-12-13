@@ -22,7 +22,7 @@ namespace MowGame.Main
     /// </summary>
     public partial class MainWindow : Window
     {
-        public bool evenement = false;
+        public bool evenement = false; // Booléen qui va instencier si on peut cliqué sur les carte ou non
 
         public MainWindow()
         {
@@ -44,11 +44,7 @@ namespace MowGame.Main
             // Initialisation
             //Game.Background = new BitmapImage(srcBackGr);
 
-            Place0.Source = new BitmapImage(srcSerreFile0);
-            Place16.Source = new BitmapImage(srcSerreFile16);
-
-            Place7B.Source = new BitmapImage(srcAcrobate7);
-            Place9B.Source = new BitmapImage(srcAcrobate9);
+            
 
             SensDuJeu.Source = new BitmapImage(srcSensDuJeu);
 
@@ -73,7 +69,7 @@ namespace MowGame.Main
             JoueurCourantCarte5.Source = new BitmapImage(uriSource5);
         }
 
-        private void BtnRamasserClick(object sender, RoutedEventArgs e)
+        private void BtnRamasserClick(object sender, RoutedEventArgs e) // Rammase le troupeau et le remet à 0
         {
             Place1.Source = null;
             Place2.Source = null;
@@ -83,7 +79,7 @@ namespace MowGame.Main
             MessageBox.Show("Vous avez rammassé le troupeau !");
         }
 
-        public void BtnJouerCarteClick(object sender, RoutedEventArgs e)
+        public void BtnJouerCarteClick(object sender, RoutedEventArgs e) // Rends les cartes cliquable et prévient l'utilisateur  
         {
             evenement = true;
             MessageBox.Show("Vous pouvez jouer une carte !");
@@ -95,7 +91,7 @@ namespace MowGame.Main
             */
 
 
-        public void BtnPoserCarte(object sender, MouseButtonEventArgs e)
+        public void BtnPoserCarte(object sender, MouseButtonEventArgs e) // Place la carte lorsqu'elle est cliqué
         {
             if (evenement)
             {

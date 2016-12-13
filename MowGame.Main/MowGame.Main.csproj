@@ -78,6 +78,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Diamond.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -124,48 +125,62 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\acrobate7.jpg">
+    <Content Include="Images\acrobate7.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\acrobate9.jpg">
+    </Content>
+    <Content Include="Images\acrobate9.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\default.jpg">
+    </Content>
+    <Content Include="Images\default.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Resource Include="Images\GameBackGround.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\retardataire.jpg">
+    <Resource Include="Images\up.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\sensDuJeu.jpg">
+    <Resource Include="Images\refresh.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\serreFile0.jpg">
+    <Resource Include="Images\GameBG.jpg" />
+    <Resource Include="Images\GameBG2.jpg" />
+    <Content Include="Images\retardataire.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\serreFile16.jpg">
+    </Content>
+    <Content Include="Images\sensDuJeu.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\standard11_2.jpg">
+    </Content>
+    <Content Include="Images\serreFile0.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\standard13_2.jpg">
+    </Content>
+    <Content Include="Images\serreFile16.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\standard4_1.jpg">
+    </Content>
+    <Content Include="Images\standard11_2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\standard5_1.jpg">
+    </Content>
+    <Content Include="Images\standard13_2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\standard7.jpg">
+    </Content>
+    <Content Include="Images\standard4_1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\standard8_3.jpg">
+    </Content>
+    <Content Include="Images\standard5_1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
+    <Content Include="Images\standard7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\standard8_3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MowGame.Core\MowGame.Core.csproj">
+      <Project>{3fa8e068-0f0f-44b1-9b05-7d954336fda5}</Project>
+      <Name>MowGame.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

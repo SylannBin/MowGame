@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MowProject.core
+namespace MowGame.Core
 {
     /// <summary>
     /// Enumération des types spéciaux de vache.
     /// Permet de tester si une carte a une spécialité précise ou n'importe laquelle.
     /// Facilite la lecture du code
     /// </summary>
-    public enum ECategorieVache : int
+    public enum ECategorieVache
     {
-        Acrobate = 2,
-        Retardataire = 3,
-        SerreFile = 1,
-        Standard = 0,
+        Standard,
+        SerreFile,
+        Acrobate,
+        Retardataire
     }
+
 }

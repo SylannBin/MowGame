@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MowProject.core
+namespace MowGame.Core
 {
     /// <summary>
     /// Principal ensemble des cartes, généré et mélangé au début de chaque manche.

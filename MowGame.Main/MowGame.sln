@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MowGame.Main", "MowGame.Main.csproj", "{2960A0B0-94CE-4C6A-82AC-0B33AC9F7289}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MowProject.core", "..\MowGame.Core\MowProject.core.csproj", "{3FA8E068-0F0F-44B1-9B05-7D954336FDA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MowGame.Core", "..\MowGame.Core\MowGame.Core.csproj", "{3FA8E068-0F0F-44B1-9B05-7D954336FDA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

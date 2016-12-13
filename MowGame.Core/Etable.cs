@@ -18,9 +18,14 @@ namespace MowGame.Core
         /// Calcul le nombre total de mouches présentes dans cette List<vache>.
         /// Effectue la somme de la propriété nb_mouche de chaque Vache présente dans la liste.
         /// </summary>
-        public virtual int CompterMouches()
+        public virtual int CompterMouches(List<Vache> list)
         {
-            throw new System.NotImplementedException();
+            int total = 0;
+            foreach (Vache element in list)
+            {
+                total += element.nb_mouches;
+            }
+            return total;
         }
 
     }

@@ -28,13 +28,75 @@ namespace MowGame.Core
         }
 
         /// <summary>
-        /// Constitue la pioche à partir de la liste des cartes du jeu.
-        /// Les cartes sont séléctionnées aléatoirement parmi les cartes non encore utilisées et sont ajoutées à la pioche.
-        /// Il n'y a plus d'aléatoire une fois la pioche constituée car les cartes ont été ajoutées dans un ordre définitif.
+        /// Creation des :
+        /// - 15 cartes vaches (numérotées de 1 à 15), avec 0 mouche
+        /// - 13 cartes vaches (numérotées de 2 à 14), avec 1 mouche
+        /// - 11 cartes vaches (numérotées de 3 à 13), avec 2 mouches
+        /// - 3 cartes vaches (numérotées 7, 8, 9), avec 3 mouches
+        /// Creation des 6 cartes vaches spéciales, avec 5 mouches :
+        /// - 2 serre-files
+        /// - 2 vaches acrobates
+        /// - 2 vaches retardataires
+        /// Return la liste des 46 Vaches
         /// </summary>
-        public virtual void GenererPioche()
+        public List<Vache> createDeck()
         {
-            throw new System.NotImplementedException();
+            List<Vache> deck = new List<Vache>();
+
+            for (int i = 1; i < 16; i++)
+            {
+                deck.Add(new Vache()
+                {
+                    Valeur = i,
+                    nb_mouches = 0,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            for (int i = 2; i < 15; i++)
+            {
+                deck.Add(new Vache()
+                {
+                    Valeur = i,
+                    nb_mouches = 1,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            for (int i = 3; i < 14; i++)
+            {
+                deck.Add(new Vache()
+                {
+                    Valeur = i,
+                    nb_mouches = 2,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            for (int i = 7; i < 10; i++)
+            {
+                deck.Add(new Vache()
+                {
+                    Valeur = i,
+                    nb_mouches = 3,
+                    Categorie = ECategorieVache.Standard,
+                    ImagePath = "fourmi.jpeg"
+                });
+            }
+
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 16, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
+
+            deck.Add(new Vache() { Valeur = 7, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 9, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
+
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
+
+            return deck;
         }
 
         /// <summary>

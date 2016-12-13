@@ -18,9 +18,16 @@ namespace MowGame.Core
         /// Condition de fin de manche, lorsqu'un joueur ne peut pas jouer de carte.
         /// Indique également que les joueurs ne peuvent plus piocher.
         /// </summary>
-        public virtual bool Est_vide()
+        public virtual bool Est_vide(List<Vache> list)
         {
-            throw new System.NotImplementedException();
+            if(list.Count == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }

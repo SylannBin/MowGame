@@ -28,6 +28,7 @@ namespace MowGame.Main
         public MainWindow()
         {
             InitializeComponent();
+            int taille;
             int CardHeight = 110;
             int CardWidth = 60;
 
@@ -70,7 +71,7 @@ namespace MowGame.Main
             JoueurCourantCarte4.Fill = new ImageBrush( new BitmapImage(uriSource4) );
             JoueurCourantCarte5.Fill = new ImageBrush( new BitmapImage(uriSource5) );
             // Origine Nathan
-            imagerefresh.Source = new BitmapImage(uriSource6);
+           
         }
 
         //test random number
@@ -166,6 +167,19 @@ namespace MowGame.Main
         {
             // TODO: Ajouter un message dans l'historique dès que l'on commence à dragndrop
             //this.HistoriquePartie
+        }
+        // Lorsque le curseur entre dans la zone stackpanel, ça taille vertical augmente à 120
+        private void hover(object sender, MouseEventArgs e)
+        {
+            int taille = 120;
+            panel.Height = taille;
+            
+        }
+        // Lorsque le curseur sort de la zone stackpanel, ça taille vertical revient à 25
+        private void finhover(object sender, MouseEventArgs e)
+        {
+            int taille = 25;
+            panel.Height = taille;
         }
     } // Fin class MainWindow : Window
 } // Fin namespace mowProject

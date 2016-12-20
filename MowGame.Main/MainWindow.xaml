@@ -88,7 +88,8 @@
         <!--FIN Liste des joueurs (EN HAUT) -->
 
         <!-- DEBUT Liste des Cartes du joueur en cours (EN BAS) -->
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25">
+
+        <StackPanel Name="panel" Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" MouseEnter="hover" MouseLeave="finhover">
 
             <Rectangle x:Name="JoueurCourantCarte1" Height="110" Width="60" Margin="20,5" Fill="FloralWhite"/>
             <Rectangle x:Name="JoueurCourantCarte2" Height="110" Width="60" Margin="20,5" Fill="FloralWhite" MouseLeftButtonDown="BtnPoserCarte"/>

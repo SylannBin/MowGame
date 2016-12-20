@@ -6,11 +6,10 @@ using System.Text;
 namespace MowGame.Core
 {
     /// <summary>
-    /// Chaque état du déroulement du jeu a sa propre manière de finir.
+    /// Contient une méthode décrivant la manière de se terminer d'une partie ou d'une manche
     /// </summary>
     public interface IGame
     {
         void est_finie();
-
     }
 }

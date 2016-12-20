@@ -16,75 +16,7 @@ namespace MowGame.Core
 	    /// <summary>
 	    /// Liste des cartes de EnsemleCarte.
 	    /// </summary>
-	    public virtual List<Vache> Cartes { get; set; }
-
-        /// <summary>
-        /// Creation des :
-        /// - 15 cartes vaches (numérotées de 1 à 15), avec 0 mouche
-        /// - 13 cartes vaches (numérotées de 2 à 14), avec 1 mouche
-        /// - 11 cartes vaches (numérotées de 3 à 13), avec 2 mouches
-        /// - 3 cartes vaches (numérotées 7, 8, 9), avec 3 mouches
-        /// Creation des 6 cartes vaches spéciales, avec 5 mouches :
-        /// - 2 serre-files
-        /// - 2 vaches acrobates
-        /// - 2 vaches retardataires
-        /// Return la liste des 46 Vaches
-        /// </summary>
-        public List<Vache> creerdeck()
-        {
-            List<Vache> deck = new List<Vache>();
-
-            for (int i = 1; i < 16; i++)
-            {
-                deck.Add(new Vache() {
-                    Valeur = i,
-                    nb_mouches = 0,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
-                });
-            }
-
-            for (int i = 2; i < 15; i++)
-            {
-                deck.Add(new Vache() {
-                    Valeur = i,
-                    nb_mouches = 1,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
-                });
-            }
-
-            for (int i = 3; i < 14; i++)
-            {
-                deck.Add(new Vache() {
-                    Valeur = i,
-                    nb_mouches = 2,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
-                });
-            }
-
-            for (int i = 7; i < 10; i++)
-            {
-                deck.Add(new Vache() {
-                    Valeur = i,
-                    nb_mouches = 3,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
-                });
-            }
-
-            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
-            deck.Add(new Vache() { Valeur = 16, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
-
-            deck.Add(new Vache() { Valeur = 7, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
-            deck.Add(new Vache() { Valeur = 9, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
-
-            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
-            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
-
-            return deck;
-        }
+	    public virtual List<Vache> Cartes { get; set; }        
 
         /// <summary>
         /// Methode Shuffle : mélange une liste aléatoirement
@@ -109,19 +41,12 @@ namespace MowGame.Core
         }
 
         /// <summary>
-        /// Create a random number in a range
-        /// </summary>
-        /// <param name="min">Minimal value</param>
-        /// <param name="max">Maximal value</param>
-        /// <returns></returns>
-        public RNGCryptoServiceProvider _RNG = new RNGCryptoServiceProvider();
-
-        /// <summary>
         /// TODO
         /// </summary>
-        /// <param name="min"></param>
-        /// <param name="max"></param>
+        /// <param name="min inclue"></param>
+        /// <param name="max exclue"></param>
         /// <returns></returns>
+        public RNGCryptoServiceProvider _RNG = new RNGCryptoServiceProvider();
         public int GetRnd(int min, int max)
         {
             byte[] rndBytes = new byte[4];
@@ -132,8 +57,7 @@ namespace MowGame.Core
             Decimal NewValue = ((Decimal)rand - (Decimal)int.MinValue) / OldRange * NewRange + (Decimal)min;
             return (int)NewValue;
         }
-
-
+        
         /// <summary>
         /// Ajoute la carte en parametre, à l'ensemble de carte.
         /// Intervient dans tous les déplacements de carte (avec la méthode RetirerCarte).

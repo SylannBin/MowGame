@@ -19,10 +19,15 @@ namespace MowGame.Core
         /// Dans la List, les positions de 0 à 16 correspondent aux numéros identiques.
         /// Les positions 17 et 18 correspondent aux cartes acrobates 7 et 9
         /// Est utilisé dans les statistiques de jeu comme achievement exceptionnel.
+        /// TODO: A voir -> compter ou non avec les cartes "acrobates".
         /// </summary>
-        public virtual bool Est_complet()
+        public virtual bool Est_complet(List<Vache> list)
         {
-            throw new System.NotImplementedException();
+            if(list.Count == 17)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -32,7 +37,22 @@ namespace MowGame.Core
         /// </summary>
         public virtual bool Est_Libre(int Valeur)
         {
-            throw new System.NotImplementedException();
+            foreach(Vache carte in Cartes)
+            {
+                if(carte.Valeur == Valeur)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        Troupeau()
+        {
+            List<Vache> troupeau = new List<Vache>();
         }
 
     }

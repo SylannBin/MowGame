@@ -49,8 +49,8 @@ namespace MowGame.Core
                 {
                     Valeur = i,
                     nb_mouches = 0,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
+                    Categorie = ECategorieVache.standard,
+                    ImagePath = "standard_" + i + "_0.jpeg"
                 });
             }
 
@@ -60,8 +60,8 @@ namespace MowGame.Core
                 {
                     Valeur = i,
                     nb_mouches = 1,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
+                    Categorie = ECategorieVache.standard,
+                    ImagePath = "standard_" + i + "_1.jpeg"
                 });
             }
 
@@ -71,8 +71,8 @@ namespace MowGame.Core
                 {
                     Valeur = i,
                     nb_mouches = 2,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
+                    Categorie = ECategorieVache.standard,
+                    ImagePath = "standard_" + i + "_2.jpeg"
                 });
             }
 
@@ -82,19 +82,19 @@ namespace MowGame.Core
                 {
                     Valeur = i,
                     nb_mouches = 3,
-                    Categorie = ECategorieVache.Standard,
-                    ImagePath = "fourmi.jpeg"
+                    Categorie = ECategorieVache.standard,
+                    ImagePath = "standard_" + i + "_3.jpeg"
                 });
             }
 
-            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
-            deck.Add(new Vache() { Valeur = 16, nb_mouches = 5, Categorie = ECategorieVache.SerreFile, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.serreFile, ImagePath = "serreFile_0_5.jpeg" });
+            deck.Add(new Vache() { Valeur = 16, nb_mouches = 5, Categorie = ECategorieVache.serreFile, ImagePath = "serreFile_16_5.jpeg" });
 
-            deck.Add(new Vache() { Valeur = 7, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
-            deck.Add(new Vache() { Valeur = 9, nb_mouches = 5, Categorie = ECategorieVache.Acrobate, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 7, nb_mouches = 5, Categorie = ECategorieVache.acrobate, ImagePath = "acrobate_7_5.jpeg" });
+            deck.Add(new Vache() { Valeur = 9, nb_mouches = 5, Categorie = ECategorieVache.acrobate, ImagePath = "acrobate_9_5.jpeg" });
 
-            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
-            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.Retardataire, ImagePath = "fourmi.jpeg" });
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.retardataire, ImagePath = "retardataire.jpeg" });
+            deck.Add(new Vache() { Valeur = 0, nb_mouches = 5, Categorie = ECategorieVache.retardataire, ImagePath = "retardaataire.jpeg" });
 
             return deck;
         }

@@ -12,10 +12,10 @@ namespace MowGame.Core
     /// </summary>
     public enum ECategorieVache
     {
-        Standard,
-        SerreFile,
-        Acrobate,
-        Retardataire
+        standard,
+        serreFile,
+        acrobate,
+        retardataire
     }
 
 }

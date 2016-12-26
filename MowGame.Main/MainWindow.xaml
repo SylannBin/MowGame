@@ -124,10 +124,6 @@
                     Margin="10"/>
 
             <!-- DEBUT Image losange Nathan -->
-            <Label x:Name="label"
-                   Content="Label"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"/>
             <Image x:Name="imagerefresh"
                    Height="33"
                    Width="33"
@@ -145,7 +141,7 @@
                 </Image.RenderTransform>
             </Image>
             <!-- FIN Image losange Nathan -->
-            
+
             <!-- Code de remplacement possible pour le bouton refresh
             <Polygon
                 x:Name="imagerefreshAlter"
@@ -181,13 +177,13 @@
             </TextBlock>
         </StackPanel>
         <!-- FIN Boite de message (A DROITE) -->
-        
+
         <!-- DEBUT Zone de jeu (Central) -->
         <StackPanel x:Name="AireDeJeu"
                     Background="FloralWhite"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
-            
+
             <!-- DEBUT exemple de binding -->
             <WrapPanel Margin="10" >
                 <TextBlock Text="Window Title : "/>
@@ -201,7 +197,9 @@
             </WrapPanel>
             <WrapPanel Margin="10" >
                 <TextBlock Text="Random : "/>
-                <TextBlock x:Name="DoraRdm" Width="100" />
+                <TextBlock x:Name="DoraRdm" Width="100" ><InlineUIContainer>
+                		<Label x:Name="label" Content=""/>
+                	</InlineUIContainer></TextBlock>
             </WrapPanel>
             <!-- FIN exemple de binding -->
 

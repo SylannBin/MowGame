@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Drawing;
 using System.IO.Packaging;
 using MowGame.Core;
+using System.Security.Cryptography;
 
 namespace MowGame.Main
 {
@@ -74,11 +75,16 @@ namespace MowGame.Main
            
         }
 
-        //test random number
+        //test random, property from carte //
         private void image_click_up(object sender, RoutedEventArgs e)
         {
+            List<Vache> deck = new List<Vache>();
             EnsembleCarte test = new EnsembleCarte();
-            DoraRdm.Text = test.GetRnd(10, 20).ToString();
+            Manche manche = new Manche();
+            deck = manche.createDeck();
+            int rng = test.GetRnd(0, deck.Count);
+            Vache carte = deck[rng];
+            DoraRdm.Text = carte.ImagePath;
             var uriSource6 = new Uri(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "up.jpg"));
             // Origine Nathan
             imagerefresh.Source = new BitmapImage(uriSource6);
@@ -181,5 +187,6 @@ namespace MowGame.Main
             int taille = 25;
             panel.Height = taille;
         }
+
     } // Fin class MainWindow : Window
 } // Fin namespace mowProject

@@ -50,7 +50,7 @@ namespace MowGame.Core
                     Valeur = i,
                     nb_mouches = 0,
                     Categorie = ECategorieVache.standard,
-                    ImagePath = "standard_" + i + "_0.jpeg"
+                    ImagePath = "standard_" + i.ToString() + "_0.jpeg"
                 });
             }
 
@@ -61,7 +61,7 @@ namespace MowGame.Core
                     Valeur = i,
                     nb_mouches = 1,
                     Categorie = ECategorieVache.standard,
-                    ImagePath = "standard_" + i + "_1.jpeg"
+                    ImagePath = "standard_" + i.ToString() + "_1.jpeg"
                 });
             }
 
@@ -72,7 +72,7 @@ namespace MowGame.Core
                     Valeur = i,
                     nb_mouches = 2,
                     Categorie = ECategorieVache.standard,
-                    ImagePath = "standard_" + i + "_2.jpeg"
+                    ImagePath = "standard_" + i.ToString() + "_2.jpeg"
                 });
             }
 
@@ -83,7 +83,7 @@ namespace MowGame.Core
                     Valeur = i,
                     nb_mouches = 3,
                     Categorie = ECategorieVache.standard,
-                    ImagePath = "standard_" + i + "_3.jpeg"
+                    ImagePath = "standard_" + i.ToString() + "_3.jpeg"
                 });
             }
 

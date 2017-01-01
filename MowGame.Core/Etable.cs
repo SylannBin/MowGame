@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MowGame.Core
 {
@@ -15,10 +12,9 @@ namespace MowGame.Core
     public class Etable : EnsembleCarte
     {
         /// <summary>
-        /// Calcul le nombre total de mouches présentes dans cette List<vache>.
-        /// Effectue la somme de la propriété nb_mouche de chaque Vache présente dans la liste.
+        /// Calcul le nombre total de mouches en ajoutant les mouches de chaque carte présente dans 'list'
         /// </summary>
-        public virtual int CompterMouches(List<Vache> list)
+        public int CompterMouches(List<Vache> list)
         {
             int total = 0;
             foreach (Vache element in list)

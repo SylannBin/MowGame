@@ -16,9 +16,9 @@ namespace MowGame.Core
         /// <summary>
         /// Indique que la pioche est vide lorsque la liste ne contient plus une seule vache
         /// </summary>
-        public virtual bool Est_vide(List<Vache> list)
+        public bool Est_vide(List<Vache> CartesDansPioche)
         {
-            return (list.Count == 0);
+            return (CartesDansPioche.Count == 0);
         }
 
 

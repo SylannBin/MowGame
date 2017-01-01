@@ -8,57 +8,38 @@ namespace MowGame.Core
     public abstract class Joueur
     {
         /// <summary>
-        /// Etable du joueur
-        /// Contient toutes les cartes ramassées par le joueur
-        /// Le nombre de mouches contenue indique les points du joueur
+        /// Etable du joueur. Contient les cartes ramassées au cours d'un tour.
+        /// Doit être remis à zéro à chaque fin de tour après avoir :
+        /// 1 - ajouté les cartes de la main (MainDuJoueur.Retirer -> Etable.Ajouter) (pour chaque carte de MainDuJoueur)
+        /// 2 - compté le nombre de mouche (Etable.CompterMouches)
         /// </summary>
-        public virtual EnsembleCarte Etable
-        {
-            get;
-            set;
-        }
+        public EnsembleCarte Etable { get; set; }
+
 
         /// <summary>
-        /// Main du joueur, liste de cartes (type Vache)
-        /// Peut contenir jusqu'à 5 cartes
+        /// Main du joueur. Contient jusqu'à 5 cartes (Vache)
+        /// Doit être vidée puis ajoutée à l'étable à chaque fin de tour
         /// </summary>
-        public virtual EnsembleCarte Main
-        {
-            get;
-            set;
-        }
+        public EnsembleCarte MainDuJoueur { get; set; }
+
 
         /// <summary>
-        /// Score total du joueur au cours d'une partie.
-        /// Initialisé à 0.
-        /// On y ajoute le nombre total de mouche dans l'étable à chaque fin de manche.
+        /// Score total du joueur au cours d'une partie (init à 0). Ajoute le total nb_mouche à chaque fin de tour
         /// </summary>
-        public virtual int score
-        {
-            get;
-            set;
-        }
+        public int score { get; set; }
+
 
         /// <summary>
-        /// Identifiant unique du joueur
-        /// numéro de 0 à 4
-        /// détermine la position sur le plan du jeu
+        /// Identifiant unique du joueur (numéro de 0 à 4)
         /// </summary>
-        public virtual int id
-        {
-            get;
-            set;
-        }
+        public int id { get; set; }
+
 
         /// <summary>
-        /// Nom du joueur, entré au début de la partie
-        /// Généré alétoirement pour un joueur IA
+        /// Nom du joueur, entré au début de la partie pour un humain et choisit alétoirement dans une liste pour un joueur IA
         /// </summary>
-        public virtual string Pseudo
-        {
-            get;
-            set;
-        }
+        public virtual string Pseudo { get; set; }
+
 
         /// <summary>
         /// Un joueur peut utiliser cette compétence s'il vient de placer une carte spéciale.

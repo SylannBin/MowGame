@@ -8,17 +8,13 @@ namespace MowGame.Core
     public class Humain : Joueur
     {
         /// <summary>
-        /// Le joueur humain voit les choix d'action dans un menu en bas de l'écran.
-        /// Les actions indisponibles au moment du jeu sont grisées.
-        /// Lorsqu'une seule action est possible, le joueur n'a pas le choix, l'action s'effectue automatiquement.
-        /// Toute action effectuée est ajoutée au log de la partie, et un message flottant apparaît sur la table de jeu.
+        /// Nom du joueur, saisit manuellement au début de la partie dans un "formulaire d'inscription"
         /// </summary>
-        public virtual EAction attendreChoix()
+        public override string Pseudo
         {
-            throw new System.NotImplementedException();
+            get { return Pseudo; }
+            set { Pseudo = value; } //TODO: Faire un Bind entre Pseudo.value et le champ que l'on utilisera dans le formulaire d'inscription
         }
-
-
 
     }
 }

@@ -22,9 +22,9 @@ namespace MowGame.Core
         /// Les joueurs peuvent continuer jouer sans piocher, mais ils devraient être incapable de joueur assez rapidement.
         ///
         /// </summary>
-        public virtual void est_finie()
+        public bool est_finie()
         {
-            throw new System.NotImplementedException();
+            return true;
         }
 
         /// <summary>

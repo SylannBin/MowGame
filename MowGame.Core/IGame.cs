@@ -7,9 +7,10 @@ namespace MowGame.Core
 {
     /// <summary>
     /// Contient une méthode décrivant la manière de se terminer d'une partie ou d'une manche
+    /// Chacune ayant sa manière de finir ...
     /// </summary>
     public interface IGame
     {
-        void est_finie();
+        bool est_finie();
     }
 }

@@ -14,21 +14,24 @@ namespace MowGame.Core
     public class Pioche : EnsembleCarte
     {
         /// <summary>
-        /// Indique que la pioche est vide.
-        /// Condition de fin de manche, lorsqu'un joueur ne peut pas jouer de carte.
-        /// Indique également que les joueurs ne peuvent plus piocher.
+        /// Indique que la pioche est vide lorsque la liste ne contient plus une seule vache
         /// </summary>
         public virtual bool Est_vide(List<Vache> list)
         {
-            if(list.Count == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (list.Count == 0);
         }
+
+
+        /// <summary>
+        /// Retourne la vache qui est à la dernière position de la pioche
+        /// Permet de piocher une carte en fournissant le résultat à la méthode RetirerCarte
+        /// </summary>
+        /// <returns></returns>
+        public Vache DessusDePioche()
+        {
+            return Cartes.Last();
+        }
+
 
     }
 }

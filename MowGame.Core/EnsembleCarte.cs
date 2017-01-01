@@ -59,26 +59,31 @@ namespace MowGame.Core
         }
         
         /// <summary>
-        /// Ajoute la carte en parametre, à l'ensemble de carte.
-        /// Intervient dans tous les déplacements de carte (avec la méthode RetirerCarte).
-        /// Peut être appelé en boucle pour remplir un ensemble de carte (ex: ajout du troupeau dans l'etable)
-        /// Ou encore en début de manche, lors de la génération de la pioche.
+        /// Ajoute la carte spécifiée en paramêtre à l'ensemble de cartes 'Cartes'
+        /// Cet ensemble de carte est spécifique à chaque instance
         /// </summary>
-        public virtual void AjouterCarte(Vache carte)
+        public void AjouterCarte(Vache carte)
 	    {
-		    throw new System.NotImplementedException();
+            Cartes.Add(carte);
 	    }
 
 	    /// <summary>
-	    /// Retire la carte en parametre de l'ensemble de carte.
-	    /// Intervient dans tous les déplacements de carte (avec la méthode AjouterCarte).
-	    /// Peut être appelé en boucle pour vider un ensemble de carte (ex: vider le troupeau)
-	    /// Ne détruit pas l'objet Vache dans la mémoire, seulement la référence.
+	    /// Retire la carte spécifiée en paramêtre, de l'ensemble de cartes 'Cartes'
+        /// Cet ensemble est spécifique à chaque instance
+        /// (L'objet n'est pas forcément détruit en mémoire)
 	    /// </summary>
-	    public virtual void RetirerCarte(Vache carte)
+	    public void RetirerCarte(Vache carte)
 	    {
-		    throw new System.NotImplementedException();
+            Cartes.Remove(carte);
 	    }
+
+        /// <summary>
+        /// Retire toutes les cartes de l'ensemble 'Cartes'
+        /// </summary>
+        public void Vider()
+        {
+            Cartes.RemoveAll(x => true);
+        }
     }
 }
 

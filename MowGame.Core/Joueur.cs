@@ -58,9 +58,11 @@ namespace MowGame.Core
         /// La carte est supprimée de la pioche et ajoutée à la main du joueur.
         /// Renvoie la carte piochée.
         /// </summary>
-        public virtual Vache piocher()
+        public virtual Vache piocher(List<Vache> list)
         {
-            throw new System.NotImplementedException();
+            Vache vache = list[list.Count - 1];
+            list.RemoveAt(list.Count - 1);
+            return vache;
         }
 
         /// <summary>

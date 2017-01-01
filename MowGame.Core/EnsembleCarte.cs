@@ -41,7 +41,7 @@ namespace MowGame.Core
         }
 
         /// <summary>
-        /// TODO
+        /// Retur un nombre aléatoire compris dans un intervalle
         /// </summary>
         /// <param name="min inclue"></param>
         /// <param name="max exclue"></param>

@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections.ObjectModel;
 
 namespace MowGame.Core
 {
@@ -9,33 +7,31 @@ namespace MowGame.Core
     /// Ensemble de cartes visibles constituant la zone de jeu principale.
     /// Ne peut contenir qu'une seule carte de chaque numéro.
     /// Les cartes retardataires peuvent remplacer n'importe quel numéro de 1 à 15 et respectent la même règle.
-    /// Parcontre les cartes acrobates ne peuvent être placées que si leur numéro respectif est déjà présent (7 ou 9).
-    ///
+    /// Les cartes acrobates ne peuvent être placées que si la carte standard correspondante (7 ou 9) est présente.
+    /// Dans ce cas, on met la carte acrobate à la place de la standard
     /// </summary>
     public class Troupeau : EnsembleCarte
     {
+        /* Propriétés */
+
+        public ObservableCollection<Vache> troupeau;
+        
+        /* Méthodes */
+
         /// <summary>
-        /// Renvoie vrai si toutes les places sont occupées.
-        /// Dans la List, les positions de 0 à 16 correspondent aux numéros identiques.
-        /// Les positions 17 et 18 correspondent aux cartes acrobates 7 et 9
-        /// Est utilisé dans les statistiques de jeu comme achievement exceptionnel.
-        /// TODO: A voir -> compter ou non avec les cartes "acrobates".
+        /// Renvoie vrai si toutes les places sont occupées (de 0 à 16).
         /// </summary>
-        public virtual bool Est_complet(List<Vache> list)
+        public bool Est_complet()
         {
-            if(list.Count == 17)
-            {
-                return true;
-            }
-            return false;
+            return troupeau.Count == 17;
         }
 
         /// <summary>
-        /// Renseigne l'appeleur de la méthode sur la disponibilité de l'emplacement pour la carte qu'on essaie de jouer.
-        /// S'il s'agit d'une carte acrobate, renvoie vrai si le numéro est Présent dans le troupeau et faux à l'inverse.
-        /// Sinon, renvoie vrai si le numéro est Absent, et faux à l'inverse.
+        /// Renvoie faux si une carte du troupeau a la valeur passée en paramêtre
+        /// A l'inverse, si aucune carte ne correspond, renvoie true.
+        /// La valeur n'a rien à voir avec l'emplacement dans le tableau !
         /// </summary>
-        public virtual bool Est_Libre(int Valeur)
+        public bool Est_Libre(int Valeur)
         {
             foreach(Vache carte in Cartes)
             {
@@ -52,7 +48,8 @@ namespace MowGame.Core
         /// </summary>
         Troupeau()
         {
-            List<Vache> troupeau = new List<Vache>();
+            ObservableCollection<Vache> troupeau = new ObservableCollection<Vache>();
+            
         }
 
     }
